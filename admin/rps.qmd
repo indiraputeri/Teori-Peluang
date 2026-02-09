@@ -1,0 +1,131 @@
+---
+title: "Rencana Pembelajaran Semester (RPS)"
+subtitle: "Teori Peluang – S1 Pendidikan Matematika"
+author: "Indira Puteri Kinasih, M.Si."
+format:
+  html:
+    toc: true
+  pdf:
+    toc: false
+    prefer-html: true
+  docx:
+    toc: false
+execute:
+  echo: false
+  warning: false
+  header-includes:
+  - \usepackage{pdflscape}
+  - \usepackage{longtable}
+---
+
+```{r setup}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+# Informasi Mata Kuliah
+
+| Item          | Keterangan                    |
+|---------------|-------------------------------|
+| Mata Kuliah   | Teori Peluang                 |
+| SKS           | 3                             |
+| Program Studi | S1 Pendidikan Matematika      |
+| Semester      | II                            |
+| Pendekatan    | Outcome-Based Education (OBE) |
+
+# Capaian Pembelajaran Mata Kuliah (CPMK)
+
+```{r}
+cpmk <- tribble(
+  ~Kode, ~Deskripsi,
+  "CPMK-1", "Menjelaskan dan menganalisis konsep dasar peluang serta hukum-hukumnya dalam penyelesaian masalah sederhana",
+  "CPMK-2", "Menentukan variabel acak dan distribusi peluang yang sesuai untuk analisis data",
+  "CPMK-3", "Menerapkan distribusi peluang untuk memodelkan fenomena acak dalam konteks nyata",
+  "CPMK-4", "Menggunakan konsep peluang dalam model statistik sederhana untuk analisis data penelitian pendidikan"
+)
+
+kable(cpmk) %>% kable_styling(full_width = FALSE)
+```
+
+# Sub-CPMK
+
+```{r}
+subcpmk <- tribble(
+  ~Kode, ~SubCPMK,
+  "S1", "Menjelaskan dan menentukan ruang sampel serta kejadian dari suatu percobaan acak",
+  "S2", "Menentukan variabel acak dan fungsi distribusinya",
+  "S3", "Menganalisis ekspektasi, variansi, dan distribusi peluang",
+  "S4", "Menggunakan model probabilistik sederhana untuk analisis data penelitian pendidikan"
+)
+
+kable(subcpmk) %>% kable_styling(full_width = FALSE)
+```
+
+# Pokok Bahasan
+
+```{r}
+materi <- tribble(
+  ~Bagian, ~Pokok_Bahasan,
+  "A", "Konsep Dasar Peluang (ruang sampel, hukum peluang, Bayes)",
+  "B", "Variabel Acak & Sifat-Sifatnya (PMF, PDF, CDF, momen)",
+  "C", "Distribusi Peluang Penting (diskret, kontinu, distribusi khusus)",
+  "D", "Pemodelan Probabilistik (simulasi & analisis data pendidikan)"
+)
+
+kable(materi)
+```
+
+# Rencana Pembelajaran Mingguan
+
+```{r}
+
+rps <- tribble(
+  ~Minggu, ~SubCPMK, ~Materi, ~Indikator, ~Asesmen, ~Metode, ~Bobot,
+  1, "S1", "Konsep peluang", "Menjelaskan konsep peluang", "Observasi", "Diskusi", 2,
+  2, "S1", "Ruang sampel & kejadian", "Menentukan ruang sampel", "Kuis", "Latihan", 3,
+  3, "S1", "Hukum peluang & kombinatorik", "Menyelesaikan soal", "Kuis", "PBL", 3,
+  4, "S1", "Peluang bersyarat & Bayes", "Menghitung P(A|B)", "Tugas", "Diskusi", 4,
+  5, "S2", "Konsep variabel acak", "Mengidentifikasi RV", "Kuis", "Diskusi", 3,
+  6, "S2", "PMF & PDF", "Menentukan distribusi", "Tugas", "Latihan", 4,
+  7, "S2", "CDF", "Menghitung peluang kumulatif", "Kuis", "Latihan", 3,
+  8, "-", "UTS", "Evaluasi", "UTS", "Tes", 15,
+  9, "S3", "Ekspektasi & variansi", "Menafsirkan nilai harapan", "Tugas", "Diskusi", 4,
+  10, "S3", "Distribusi diskret", "Memilih distribusi", "Kuis", "PBL", 3,
+  11, "S3", "Distribusi kontinu", "Menghitung interval", "Tugas", "Latihan", 4,
+  12, "S3", "Distribusi khusus", "Interpretasi uji", "Kuis", "Diskusi", 3,
+  13, "S4", "Simulasi & aproksimasi", "Simulasi Monte Carlo", "Tugas", "Praktik", 5,
+  14, "S4", "Model probabilistik pendidikan", "Analisis data pendidikan", "Proyek", "Project-based", 10,
+  15, "Review", "Integrasi konsep", "Menyimpulkan model", "Partisipasi", "Diskusi", 2,
+  16, "-", "UAS", "Evaluasi akhir", "UAS", "Tes", 30
+)
+
+if (knitr::is_html_output()) {
+  kable(rps) %>%
+    kable_styling(font_size = 11) %>%
+    scroll_box(width = "100%", height = "600px")
+} else {
+  kable(rps, booktabs = TRUE) %>%
+    kable_styling(font_size = 9)
+}
+
+```
+
+# Penilaian
+
+```{r}
+penilaian <- tribble(
+  ~Komponen, ~Bobot,
+  "Kuis", "20%",
+  "Tugas", "20%",
+  "Proyek Mini", "15%",
+  "UTS", "15%",
+  "UAS", "30%"
+)
+
+kable(penilaian)
+```
+
+# Pernyataan OBE
+
+RPS ini disusun berdasarkan prinsip **constructive alignment**, di mana CPMK diturunkan ke Sub-CPMK, direncanakan dalam pembelajaran mingguan, dan dievaluasi melalui asesmen yang selaras untuk memastikan ketercapaian capaian pembelajaran.

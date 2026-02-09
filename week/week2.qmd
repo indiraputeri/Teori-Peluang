@@ -1,0 +1,203 @@
+---
+title: "Teori Peluang"
+subtitle: "Pekan 3 – Hukum-Hukum Peluang dan Kombinatorik"
+author:
+  - name: Indira Puteri Kinasih
+    orcid: 0009-0009-6959-6723
+    email: indiraputeri@uinmataram.ac.id
+    affiliations: Universitas Islam Negeri Mataram
+format:
+  ubd-revealjs:
+    self-contained: false
+    chalkboard: true
+    toc: false
+    toc-depth: 1
+execute:
+  echo: false
+---
+
+## Tujuan Pembelajaran Pekan 3
+
+Setelah perkuliahan ini, mahasiswa diharapkan mampu:
+
+- menjelaskan hukum-hukum dasar peluang
+- menggunakan aturan penjumlahan dan perkalian peluang
+- menyelesaikan masalah peluang sederhana menggunakan konsep kombinatorik
+
+---
+
+## Mengingat Kembali
+
+Pada pekan sebelumnya, kita telah membahas:
+
+- percobaan acak
+- ruang sampel
+- kejadian
+- peluang kejadian sederhana
+
+Hari ini kita akan **memperluas cara menghitung peluang**.
+
+---
+
+## Hukum Peluang Dasar
+
+Untuk setiap kejadian A:
+
+- $0 \le P(A) \le 1$
+- $P(S) = 1$
+- $P(\emptyset) = 0$
+
+Hukum ini menjadi dasar semua perhitungan peluang.
+
+---
+
+## Hukum Penjumlahan Peluang
+
+Untuk dua kejadian A dan B:
+
+$P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+
+Jika A dan B **saling lepas**:
+
+$P(A \cup B) = P(A) + P(B)$
+
+---
+
+## Contoh Hukum Penjumlahan
+
+Melempar sebuah dadu:
+
+- A = muncul bilangan genap
+- B = muncul bilangan lebih dari 4
+
+Hitung $P(A \cup B)$.
+
+---
+
+## Hukum Perkalian Peluang
+
+Untuk dua kejadian A dan B:
+
+$P(A \cap B) = P(A) \times P(B|A)$
+
+Jika A dan B **saling bebas (independen)**:
+
+$P(A \cap B) = P(A) \times P(B)$
+
+---
+
+## Contoh Hukum Perkalian
+
+Melempar dua koin secara bersamaan:
+
+- peluang muncul dua gambar?
+
+Gunakan hukum perkalian.
+
+---
+
+## Kejadian Saling Lepas vs Bebas
+
+- **Saling lepas**: tidak bisa terjadi bersama
+- **Saling bebas**: kejadian satu tidak memengaruhi kejadian lain
+
+📌 Ini dua konsep berbeda dan sering tertukar.
+
+---
+
+## Mengapa Perlu Kombinatorik?
+
+Untuk ruang sampel besar:
+- menulis semua anggota $S$ tidak efisien
+- perlu cara menghitung banyaknya kemungkinan
+
+Di sinilah **kombinatorik** digunakan.
+
+---
+
+## Aturan Perkalian
+
+Jika suatu proses terdiri dari:
+- tahap 1: $n$ cara
+- tahap 2: $m$ cara
+
+Maka seluruh proses memiliki:
+
+$n \times m$ kemungkinan.
+
+---
+
+## Permutasi
+
+**Permutasi** adalah penyusunan objek dengan memperhatikan urutan.
+
+$P(n,r) = \frac{n!}{(n-r)!}$
+
+Contoh: menyusun 3 dari 5 siswa sebagai pengurus kelas.
+
+---
+
+## Kombinasi
+
+**Kombinasi** adalah pemilihan objek tanpa memperhatikan urutan.
+
+$C(n,r) = \frac{n!}{r!(n-r)!}$
+
+Contoh: memilih 3 siswa dari 5 siswa.
+
+---
+
+## Hubungan Kombinatorik dan Peluang
+
+Peluang sering dihitung sebagai:
+
+$P(A) = \frac{\text{banyak kejadian yang diinginkan}}{\text{banyak ruang sampel}}$
+
+Kombinatorik membantu menghitung pembilang dan penyebut.
+
+---
+
+## Contoh Kontekstual (Pendidikan)
+
+Dari 10 siswa:
+- 6 perempuan
+- 4 laki-laki
+
+Jika dipilih 2 siswa secara acak:
+- berapa peluang keduanya perempuan?
+
+Gunakan kombinasi.
+
+---
+
+## Kesalahan Umum Mahasiswa
+
+- salah membedakan permutasi dan kombinasi
+- langsung pakai rumus tanpa memahami konteks
+- lupa mendefinisikan kejadian
+
+---
+
+## Latihan Mandiri
+
+1. Tentukan peluang dari:
+   - memilih 2 bola merah dari kantong berisi 3 merah dan 2 biru
+2. Tentukan apakah masalah menggunakan permutasi atau kombinasi
+
+---
+
+## Ringkasan Pekan 3
+
+Hari ini kita belajar:
+
+- hukum penjumlahan dan perkalian peluang
+- kejadian saling lepas dan bebas
+- dasar-dasar kombinatorik
+
+---
+
+## Pekan Berikutnya
+
+### 👉 Peluang bersyarat dan Teorema Bayes
+
+Siapkan diri Anda 🙂

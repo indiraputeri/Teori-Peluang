@@ -1,0 +1,173 @@
+---
+title: "Teori Peluang"
+subtitle: "Pekan 2 – Konsep Peluang, Ruang Sampel, dan Kejadian"
+author:
+  - name: Indira Puteri Kinasih
+    orcid: 0009-0009-6959-6723
+    email: indiraputeri@uinmataram.ac.id
+    affiliations: Universitas Islam Negeri Mataram
+format:
+  ubd-revealjs:
+    self-contained: false
+    chalkboard: true
+    toc: false
+    toc-depth: 1
+execute:
+  echo: false
+---
+
+## Tujuan Pembelajaran Pekan 2
+
+Setelah perkuliahan ini, mahasiswa diharapkan mampu:
+
+ - menjelaskan konsep dasar peluang
+ - menentukan ruang sampel suatu percobaan acak
+ - mengidentifikasi kejadian dalam ruang sampel
+
+---
+
+## Mengingat Kembali
+
+Pada pekan sebelumnya, kita telah membahas:
+
+- apa itu Teori Peluang
+- posisi mata kuliah dalam kurikulum
+- gambaran umum materi semester
+
+Hari ini kita mulai **materi inti pertama**.
+
+---
+
+## Percobaan Acak
+
+**Percobaan acak** adalah proses yang:
+
+- dapat diulang
+- hasilnya tidak dapat diprediksi secara pasti
+- memiliki himpunan hasil yang jelas
+
+Contoh:
+
+- melempar koin
+- melempar dadu
+- memilih satu siswa secara acak
+
+---
+
+## Ruang Sampel
+
+**Ruang sampel (S)** adalah himpunan semua hasil yang mungkin dari suatu percobaan acak.
+
+Contoh:
+
+- Lempar 1 koin → S = {A, G}
+- Lempar 1 dadu → S = {1, 2, 3, 4, 5, 6}
+
+---
+
+## Kejadian
+
+**Kejadian (A)** adalah himpunan bagian dari ruang sampel.
+
+Contoh:
+
+- $A$ $=$ muncul angka genap pada dadu
+- $A = {2, 4, 6}$
+
+📌 Kejadian bisa terdiri dari satu atau lebih hasil.
+
+---
+
+## Hubungan Ruang Sampel dan Kejadian
+
+- S = ruang sampel
+- A ⊆ S
+
+Setiap kejadian **selalu** bagian dari ruang sampel.
+
+---
+
+## Konsep Peluang
+
+Secara intuitif, peluang menyatakan:
+
+> seberapa mungkin suatu kejadian terjadi
+
+Untuk ruang sampel berhingga dan peluang sama:
+
+$P(A) = \frac{n(A)}{n(S)} $
+
+---
+
+## Contoh Perhitungan
+
+Melempar sebuah dadu:
+
+- $S = {1,2,3,4,5,6}$
+- $A = muncul bilangan genap = {2,4,6}$
+
+$P(A) = \frac{3}{6} = \frac{1}{2}$
+
+---
+
+## Catatan Penting
+
+- Peluang **bukan tebakan**
+- Peluang bergantung pada **struktur ruang sampel**
+- Ruang sampel harus ditentukan dengan benar
+
+---
+
+## Kesalahan Umum Mahasiswa
+
+- tidak menuliskan ruang sampel
+- mencampur hasil dan kejadian
+- menghitung tanpa mendefinisikan A dan S
+
+➡️ Biasakan **tulis dulu S dan A**.
+
+---
+
+## Contoh Kontekstual (Pendidikan)
+
+Dalam satu kelas terdapat:
+
+- 12 siswa laki-laki
+- 18 siswa perempuan
+
+Jika satu siswa dipilih secara acak:
+
+- tentukan ruang sampel
+- tentukan peluang terpilih siswa perempuan
+
+---
+
+## Latihan Mandiri
+
+1. Tentukan ruang sampel dari:
+
+   - melempar dua koin
+   - melempar satu koin dan satu dadu
+   
+2. Tentukan kejadian dan peluangnya
+
+---
+
+## Ringkasan Pekan 2
+
+Hari ini kita belajar:
+
+- percobaan acak
+- ruang sampel
+- kejadian
+- konsep peluang dasar
+
+Ini adalah **fondasi** untuk materi berikutnya.
+
+---
+
+## Pekan Berikutnya
+
+### 👉 Hukum-hukum peluang dan kombinatorik
+
+Siapkan diri Anda 🙂

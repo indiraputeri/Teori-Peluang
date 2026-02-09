@@ -1,0 +1,34 @@
+---
+title: "Diagnostic Quiz – Teori Peluang"
+author: "Indira P. Kinasih"
+date: "`r Sys.Date()`"
+output:
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+    show_progress: true
+runtime: shiny_prerendered
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+```
+
+```{r q1, echo=FALSE}
+question(
+  "Sebuah koin fair dilempar satu kali. Peluang muncul angka adalah …",
+  answer("0"),
+  answer("1/4"),
+  answer("1/2", correct = TRUE),
+  answer("1"),
+  allow_retry = TRUE
+)
+```
+
+
+

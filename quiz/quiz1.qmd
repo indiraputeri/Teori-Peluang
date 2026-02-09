@@ -1,0 +1,82 @@
+---
+title: "Diagnostic Quiz"
+subtitle: "Teori Peluang (MTK0405)"
+author: "Indira P. Kinasih"
+format: pdf
+editor: visual
+---
+
+## **Petunjuk**
+Quiz ini bersifat diagnostik, bukan ujian. Ini tidak memengaruhi nilai akhir dan bertujuan memetakan pemahaman awal kalian sebagai mahasiswa.
+
+## Soal
+
+1. Saat mendengar istilah peluang atau probabilitas, perasaan Anda biasanya adalah:
+
+   A. Sangat nyaman\
+   B. Biasa saja\
+   C. Sedikit cemas\
+   D. Sangat cemas\
+
+2. Sebelumnya, Anda pernah mempelajari peluang dan statistik di jenjang:
+
+   A. SD\
+   B. SMP\
+   C. SMA\
+   D. Belum pernah / tidak ingat\
+
+3. Menurut Anda, konsep peluang paling dekat dengan:
+
+   A. Matematika murni\
+   B. Statistika\
+   C. Kehidupan sehari-hari\
+   D. Tidak tahu\
+   
+4. Nilai peluang suatu kejadian selalu berada pada interval:
+
+   A. Kurang dari $0$\
+   B. $(0,1)$\
+   C. Lebih dari $1$\
+   D. Bilangan bulat\
+   
+5. Sebuah koin *fair* dilempar/dilantunkan satu kali. Peluang muncul angka adalah:
+
+   A. $0$\
+   B. $1/4$\
+   C. $1/2$\
+   D. $1$\
+   
+6. Sebuah dadu *fair* dilempar/dilantunkan satu kali. Peluang muncul bilangan genap adalah:
+
+   A. $1/6$\
+   B. $1/3$\
+   C. $1/2$\
+   D. $2/3$\
+   
+7. Di dalam sebuah kotak terdapat 3 bola merah dan 1 bola biru. Jika satu bola diambil secara acak, peluang terambil bola biru adalah:
+
+   A. $1/3$\
+   B. $1/4$\
+   C. $1/2$\
+   D. $3/4$\
+
+8. Ruang sampel adalah:
+
+   A. Hasil yang diinginkan\
+   B. Semua hasil yang mungkin terjadi\
+   C. Kejadian tertentu\
+   D. Percobaan acak\
+   
+9. Situasi berikut yang paling tepat melibatkan konsep peluang adalah:
+
+   A. Mengukur panjang meja\
+   B. Menghitung jumlah kursi\
+   C. Memprediksi hujan besok\
+   D. Mengukur tinggi badan\
+
+10. Setelah melihat soal-soal ini, Anda merasa kesiapan Anda belajar Teori Peluang adalah:
+
+    A. Sangat siap\
+    B. Cukup siap\
+    C. Masih ragu\
+    D. Perlu banyak bimbingan\
