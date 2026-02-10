@@ -1,0 +1,196 @@
+---
+title: "Teori Peluang"
+subtitle: "Pekan 1 – Orientasi"
+author:
+  - name: Indira Puteri Kinasih
+    orcid: 0009-0009-6959-6723
+    email: indiraputeri@uinmataram.ac.id
+    affiliations: Universitas Islam Negeri Mataram
+format:
+  ubd-revealjs:
+    output-file: index.html
+    self-contained: true
+    chalkboard: false
+    toc: false
+    toc-depth: 1
+execute:
+  echo: false
+---
+
+## Admin
+
+-   Dosen
+
+::: {.callout style="background-color:#eeeeee;"}
+$\texttt{Indira\ P.\ Kinasih}$\
+$\texttt{Assistant\ Professor\ in\ Statistics}$\
+$\texttt{indiraputeri.github.io}$\
+$\texttt{indiraputeri@uinmataram.ac.id}$
+:::
+
+-   Perkuliahan: Setiap **Jumat**, **R.6**, Komplek FTK, Gedung B, Lt.3
+    -   07.30am - 09.45am (**kls IIC**)
+    -   09.45am - 12.00am (**kls IID**)
+-   Perhatikan material dan jadual, serta updatenya
+-   
+
+## Deskripsi Mata Kuliah
+
+-   Mata kuliah ini dirancang untuk memperdalam pemahaman mahasiswa mengenai **ketidakpastian dan proses acak** yang mendasari analisis data dan pemodelan statistik.
+
+-   Fokus utama mata kuliah ini adalah pada pengembangan **cara berpikir probabilistik**, yaitu kemampuan untuk memodelkan situasi nyata ke dalam kerangka matematis yang terstruktur.
+
+-   Penekanan diberikan pada **pemahaman makna di balik rumus**, bukan sekadar pada perhitungan mekanis.
+
+## *Learning Outcomes*
+
+capaian yang diharapkan adalah mahasiswa mampu:
+
+-   Menjelaskan konsep dasar peluang meliputi percobaan acak, ruang sampel, kejadian, serta hukum-hukum dasar peluang secara sistematis.
+
+-   Menganalisis peluang kejadian menggunakan aturan penjumlahan, perkalian, dan peluang bersyarat dalam permasalahan sederhana.
+
+-   Menjelaskan dan menggunakan variabel acak diskret dan kontinu beserta karakteristiknya.
+
+## *Learning Outcomes* (cont'd)
+
+-   Menghitung ukuran-ukuran penting variabel acak seperti nilai harapan dan varians.
+
+-   Mengidentifikasi dan menggunakan distribusi peluang penting dalam konteks sederhana.
+
+-   Membangun dan menafsirkan model probabilistik sederhana untuk merepresentasikan fenomena acak.
+
+## Pengetahuan prasyarat
+
+::: columns
+::: {.column width="50%"}
+::: {.callout-note style="background-color:#eeeeee;"}
+Mahasiswa **tidak dituntut sudah mahir**, tetapi **pernah terpapar** materi berikut. Beberapa bagian akan **direview singkat** di awal perkuliahan.
+:::
+
+::: callout-important
+### Matematika sekolah (SMA)
+
+-   Aritmatika\
+-   Pecahan & Percentages\
+-   Aljabar & fungsi
+-   Integral & turunan (diferensiasi)
+:::
+:::
+
+::: {.column width="50%"}
+::: callout-important
+### Himpunan
+
+-   Himpunan dan elemen himpunan\
+-   Notasi terkait himpunan ($\in$, $\subset$, $\cup$, $\cap$)\
+-   logika matematika\
+:::
+
+::: callout-important
+### *Counting* & Penalaran
+
+-   Menghitung kemungkinan hasil suatu percobaan\
+-   Permutasi dan kombinasi dasar\
+-   Berpikir sistematis dan logis\
+:::
+:::
+:::
+
+## Cakupan materi
+
+::: columns
+::: {.column width="50%"}
+::: callout-tip
+### Dasar
+
+-   Teori himpunan\
+-   Logika & notasi\
+-   *Counting principles*
+    -   Permutasi\
+    -   kombinasi\
+:::
+
+::: callout-tip
+### Inti dari teori peluang
+
+-   Ruang sampel\
+-   Kejadian\
+-   Aksioma peluang\
+-   Peluang bersyarat\
+-   *Independence*\
+:::
+:::
+
+::: {.column width="50%"}
+::: callout-tip
+### Peubah Acak
+
+-   Peubah acak\
+-   PMF / PDF / CDF\
+-   Distribusi diskret\
+-   Distribusi kontinu\
+:::
+
+::: callout-tip
+### Penalaran & aplikasi
+
+-   Expected value\
+-   Variance\
+-   Law of Large Numbers\
+-   Simulation & interpretation\
+-   Decision making under uncertainty\
+:::
+:::
+:::
+
+## Asesmen/Penilaian
+
+[Formatif]{.underline}
+
+-   Quiz
+-   *take home mock* UTS/UAS
+
+[Sumatif]{.underline}
+
+-   **\[25%\]** UTS
+-   **\[30%\]** UAS
+-   **\[30%\]** 5 $\times$ tugas terstruktur
+-   **\[15%\]** **catatan rutin mahasiswa**
+
+::: aside
+note: Catatan mahasiswa akan diobservasi 4-5 $\times$ setiap akhir topik utama selesai diberikan 
+:::
+
+## Bagaimana cara menempuh kuliah ini?
+
+-   **Catat dulu, paham belakangan**. Tak mengapa jika belum paham sepenuhnya saat dosen menjelaskan, yang penting materi tertangkap dengan baik;
+
+-   **Tulis ulang setelah kelas**. Pakai bahasamu sendiri. Ini cara paling ampuh supaya “*klik*”.
+
+-   Isi catatan sebaiknya:
+
+    -   Definisi & rumus penting; contoh soal $+$ cara mikirnya
+    -   Gambar, grafik, atau diagram; catatan “kenapa bisa begini?”
+
+-   **Ulangi** $=$ belajar; nikmati proses 'mengulang' itu
+
+-   Sedikit tapi rutin; catatan ringkas lebih efektif daripada **SKS (Sistem Kebut Semalam)** :D
+
+## Grafik ingatan manusia
+
+::: columns
+::: {.column width="50%"}
+![](ebbinghauss_curve.png){width="100%" fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](ebbinghauss_curve2.png){width="100%" fig-align="center"}
+:::
+:::
+
+*"Apa yang dapat kalian simpulkan dari dua grafik tersebut?"*
+
+::: footer
+Credit: [`Retrieval: Getting and Forgetting`](http://www.senseandsensation.com/2013/03/retrieval-getting-and-forgetting-part-8.html)
+:::

@@ -29,13 +29,15 @@ $ubdgray:   $uin-gray;
    FONTS
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400');
-@import url('https://fonts.googleapis.com/css?family=Century_Gothic:200,300,400');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
 
-$font-family-sans-serif: "Lato", "URW Gothic L", "Futura", sans-serif !default;
-$presentation-heading-font: "Lato", "URW Gothic L", "Futura", sans-serif !default;
-$presentation-heading-font-weight: 300;
+$font-family-sans-serif: "Roboto", sans-serif !default;
+$presentation-font-size-root: 36px;
+
+$presentation-heading-font: "Roboto", sans-serif !default;
+$presentation-heading-color: $ubdblack !default;
+$presentation-heading-font-weight: 200;
 
 
 $body-color: $ubdblack !default;
@@ -156,38 +158,78 @@ $selection-bg: $ubdyellow !default;
 }
 
 /* =========================================================
-   HEADINGS
-   ========================================================= */
-
-.reveal h1 { font-weight: 300; }
-.reveal h2 { font-weight: 400; font-size: 1.35em; }
-.reveal h3 { color: $ubdblue; font-style: italic; }
-.reveal h4 { color: $ubdgray; font-size: 0.9em; }
-
-/* =========================================================
    LISTS
    ========================================================= */
+
+// alerts etc.
+
+.alert {
+  color: $ubdred;
+}
+
+.fg {
+  color: var(--col, $ubdblack);
+}
+
+.bg {
+  background-color: var(--col, #fff);
+  padding: 0.1em;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+// lists
+
+// Unordered lists
 
 .reveal ul {
   font-weight: 300;
   padding-left: 16px;
   font-size: 92%;
-}
+  margin-top: 0;
+  padding-top: 0;
 
-.reveal ul li::marker {
-  color: mix($ubdblue, white, 70%);
+  li::marker {
+    color: mix($ubdblue, white, 70%);
+  }
 }
 
 .reveal ul ul {
   list-style: none;
   font-size: 85%;
+  padding: 0;
+  margin-bottom: 0;
+  
+  li:before {
+    content: $whitecircle;
+    color: mix($ubdblue, white, 60%);
+    display: inline-block;
+    width: 0.3em;
+    margin-left: -1.2em;
+    margin-right: 0.8em;
+  }
 }
 
-.reveal ul ul li::before {
-  content: $whitecircle;
-  margin-right: 0.6em;
-  color: mix($ubdblue, white, 60%);
+// Ordered lists
+
+.reveal ol {
+  font-weight: 300;
+  padding-left: 16px;
+  font-size: 92%;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  li::marker {
+    color: $ubdblue;
+  }
 }
+
+.reveal ol ol {
+  font-size: 85%;
+  padding: 0;
+  margin-bottom: 0;
+}
+
 
 /* =========================================================
    CODE
@@ -350,7 +392,7 @@ span.math.inline, span.math.display {
 
 .reveal aside {
   position: absolute;
-  top: 690px;
+  top: 650px;
   left: 25px;
 }
 
