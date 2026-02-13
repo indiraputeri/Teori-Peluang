@@ -108,36 +108,39 @@ Mahasiswa **tidak dituntut sudah mahir**, tetapi **pernah terpapar** materi beri
 ::: columns
 ::: {.column width="50%"}
 ::: callout-tip
-### Konsep dasar peluang
+### Analisis kombinatorial
 
-- Percobaan acak; ruang sampel dan kejadian;
-- aksioma dan hukum peluang; aturan penjumlahan & perkalian;
-- peluang bersyarat; dan kejadian bebas
+- The basic principle of counting;
+- Konsep permutasi, kombinasi;
+- koefisien multinomial
 :::
 
 ::: callout-tip
-### Variabel acak
+### Aksioma peluang
 
-- Definisi variabel acak; variabel acak diskret vs kontinu;
-- Fungsi peluang & fungsi kepadatan;
-- Fungsi distribusi kumulatif, nilai harapan dan varians
+- Ruang sampel dan kejadian;
+- Aksioma peluang, proposisi sederhana;
+- Ruang sampel dengan hasil yang sama kemungkinannya;
+- Peluang sebagai fungsi kontinu & ukuran tingkat keyakinan
+
 :::
 :::
 
 ::: {.column width="50%"}
 ::: callout-tip
-### Distribusi peluang
+### Peluang bersyarat & independence
 
-- Distribusi Bernoulli dan Binomial, Distribusi Poisson;
-- distribusi Uniform, Eksponensial, Normal
+- Formula Bayes
+- Kejadian saling bebas
 :::
 
 ::: callout-tip
-### Pemodelan probabilistik
-
-- konsep model probabilistik, asumsi dalam pemodelan peluang;
-- hubungan peluang dan data, contoh pemodelan probabilistik sederhana;
-- pengantar inferensi statistik
+### Distribusi peluang
+- Variabel acak(v.a), v.a diskret;
+- Ekspektasi, variansi
+- distribusi bernoulli, binomial, dan Poisson
+- v.a kontinu
+- distribusi uniform, normal, & eksponensial
 :::
 :::
 :::
