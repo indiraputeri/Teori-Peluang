@@ -60,6 +60,12 @@ capaian yang diharapkan adalah mahasiswa mampu:
 
 -   Membangun dan menafsirkan model probabilistik sederhana untuk merepresentasikan fenomena acak.
 
+
+## Buku teks
+
+- Casella, G., & Berger, R.L. (2002). *Statistical inference (2nd ed)*. Duxbury.
+- Ross, S. M. (2019). *A first course in probability*. Pearson Boston
+
 ## Pengetahuan prasyarat
 
 ::: columns
@@ -102,44 +108,36 @@ Mahasiswa **tidak dituntut sudah mahir**, tetapi **pernah terpapar** materi beri
 ::: columns
 ::: {.column width="50%"}
 ::: callout-tip
-### Dasar
+### Konsep dasar peluang
 
--   Teori himpunan\
--   Logika & notasi\
--   *Counting principles*
-    -   Permutasi\
-    -   kombinasi\
+- Percobaan acak; ruang sampel dan kejadian;
+- aksioma dan hukum peluang; aturan penjumlahan & perkalian;
+- peluang bersyarat; dan kejadian bebas
 :::
 
 ::: callout-tip
-### Inti dari teori peluang
+### Variabel acak
 
--   Ruang sampel\
--   Kejadian\
--   Aksioma peluang\
--   Peluang bersyarat\
--   *Independence*\
+- Definisi variabel acak; variabel acak diskret vs kontinu;
+- Fungsi peluang & fungsi kepadatan;
+- Fungsi distribusi kumulatif, nilai harapan dan varians
 :::
 :::
 
 ::: {.column width="50%"}
 ::: callout-tip
-### Peubah Acak
+### Distribusi peluang
 
--   Peubah acak\
--   PMF / PDF / CDF\
--   Distribusi diskret\
--   Distribusi kontinu\
+- Distribusi Bernoulli dan Binomial, Distribusi Poisson;
+- distribusi Uniform, Eksponensial, Normal
 :::
 
 ::: callout-tip
-### Penalaran & aplikasi
+### Pemodelan probabilistik
 
--   Expected value\
--   Variance\
--   Law of Large Numbers\
--   Simulation & interpretation\
--   Decision making under uncertainty\
+- konsep model probabilistik, asumsi dalam pemodelan peluang;
+- hubungan peluang dan data, contoh pemodelan probabilistik sederhana;
+- pengantar inferensi statistik
 :::
 :::
 :::
@@ -162,7 +160,16 @@ Mahasiswa **tidak dituntut sudah mahir**, tetapi **pernah terpapar** materi beri
 note: Catatan mahasiswa akan diobservasi 4-5 $\times$ setiap akhir topik utama selesai diberikan 
 :::
 
-## Bagaimana cara menempuh kuliah ini?
+## Tips belajar
+
+1. Baca slide/buku teks/material terkait MK sebelum kuliah;  
+2. Ikuti perkuliahan dengan aktif; 
+3. Tulis ulang catatan setelah kelas;
+4. Kerjakan latihan dan tugas;
+5. Jika tidak paham, **TANYA** :)  
+6. Aktif berdiskusi dan berlatih
+
+## Tentang mencatat
 
 -   **Catat dulu, paham belakangan**. Tak mengapa jika belum paham sepenuhnya saat dosen menjelaskan, yang penting materi tertangkap dengan baik;
 
