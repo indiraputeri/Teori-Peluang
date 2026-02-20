@@ -159,7 +159,7 @@ Misalkan kelas teori peluang terdiri dari 7 mahasiswa dan 5 mahasiswi. Mereka di
 
 - kata "STATISTIKA" terdiri dari 10 huruf;
 
-- jika setiap huruf dianggap berbeda, dan sesuai dengan kaidah permutasi, maka banyaknya susunan yang berbeda adalah $6! = \dots$
+- jika setiap huruf dianggap berbeda, dan sesuai dengan kaidah permutasi, maka banyaknya susunan yang berbeda adalah $10! = \dots$
 
 - tapi, apakah itu sudah benar?
 
@@ -186,7 +186,7 @@ $$
 :::{.callout style="background-color:#eeeeee;"}
 
 Karena pertukaran huruf yg sama tidak akan menghasilkan susunan baru, 
-maka kita harus membagi $\frac{6!}{2!\ . 3!\ . 2!\ . 2!\ }=\dots$
+maka kita harus membagi $\frac{10!}{2!\ . 3!\ . 2!\ . 2!\ } = \dots$
 
 :::
 
@@ -245,8 +245,8 @@ $$ {#eq-idtcomb}
 
 nilai $\binom{n}{r}$ disebut juga sebagai koefisien binomial
 
-
-
 $$
 (x+y)^n = \sum_{k=0}^n\binom{n}{k}x^ky^{n-k}
 $${#eq-binom}
+
+## 
