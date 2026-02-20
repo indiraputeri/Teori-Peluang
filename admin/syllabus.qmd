@@ -31,6 +31,7 @@ execute:
 {\large Semester Genap 2025/2026} \\[0.6cm]
 \end{center}
 ```
+
 ## Deskripsi Singkat
 
 Mata kuliah Teori Peluang dirancang untuk memperdalam pemahaman mahasiswa mengenai ketidakpastian dan proses acak yang mendasari analisis data dan pemodelan statistik. Mata kuliah ini menjadi fondasi konseptual penting bagi berbagai kajian statistik, inferensi, dan analisis data, di mana kesimpulan tentang suatu fenomena nyata harus ditarik dari informasi yang terbatas dan bersifat tidak pasti.
@@ -43,80 +44,110 @@ Melalui mata kuliah ini, mahasiswa diharapkan tidak hanya mampu melakukan perhit
 
 Setelah mengikuti mata kuliah ini, capaian yang diharapkan adalah:
 
-   - Menjelaskan konsep dasar peluang meliputi percobaan acak, ruang sampel, kejadian, serta hukum-hukum dasar peluang secara sistematis.
+-   Menjelaskan konsep dasar peluang meliputi percobaan acak, ruang sampel, kejadian, serta hukum-hukum dasar peluang secara sistematis.
 
-   - Menganalisis peluang kejadian menggunakan aturan penjumlahan, perkalian, dan peluang bersyarat dalam permasalahan sederhana.
+-   Menganalisis peluang kejadian menggunakan aturan penjumlahan, perkalian, dan peluang bersyarat dalam permasalahan sederhana.
 
-   - Menjelaskan dan menggunakan variabel acak diskret dan kontinu beserta karakteristiknya.
+-   Menjelaskan dan menggunakan variabel acak diskret dan kontinu beserta karakteristiknya.
 
-   - Menghitung ukuran-ukuran penting variabel acak seperti nilai harapan dan varians.
+-   Menghitung ukuran-ukuran penting variabel acak seperti nilai harapan dan varians.
 
-   - Mengidentifikasi dan menggunakan distribusi peluang penting dalam konteks sederhana.
+-   Mengidentifikasi dan menggunakan distribusi peluang penting dalam konteks sederhana.
 
-   - Membangun dan menafsirkan model probabilistik sederhana untuk merepresentasikan fenomena acak.
+-   Membangun dan menafsirkan model probabilistik sederhana untuk merepresentasikan fenomena acak.
 
-## Materi Perkuliahan dan *outcome* yang diharapkan
+## Cakupan Materi Kuliah
 
 Dalam jangka waktu 16 pekan, kita akan mempelajari topik-topik berikut:
 
-- **Konsep dasar peluang**: Percobaan acak, Ruang sampel dan kejadian, Aksioma dan hukum peluang, Aturan penjumlahan & perkalian, Peluang bersyarat dan kejadian bebas
+-   **Konsep dasar peluang**: Percobaan acak, Ruang sampel dan kejadian, Aksioma dan hukum peluang, Aturan penjumlahan & perkalian, Peluang bersyarat dan kejadian bebas
 
-- **Variabel acak**: Definisi variabel acak, Variabel acak diskret vs kontinu, Fungsi peluang & fungsi kepadatan, Fungsi distribusi kumulatif, Nilai harapan dan varians
+-   **Variabel acak**: Definisi variabel acak, Variabel acak diskret vs kontinu, Fungsi peluang & fungsi kepadatan, Fungsi distribusi kumulatif, Nilai harapan dan varians
 
-- **Distribusi peluang**: Distribusi Bernoulli dan Binomial, Distribusi Poisson, Distribusi Uniform, Eksponensial, Normal, dan interpretasi parameter distribusi
+-   **Distribusi peluang**: Distribusi Bernoulli dan Binomial, Distribusi Poisson, Distribusi Uniform, Eksponensial, Normal
 
-- **Pemodelan probabilistik**: konsep model probabilistik, asumsi dalam pemodelan peluang, hubungan peluang dan data, contoh pemodelan probabilistik sederhana, pengantar inferensi statistik
+-   **Pemodelan probabilistik**: konsep model probabilistik, asumsi dalam pemodelan peluang, hubungan peluang dan data, contoh pemodelan probabilistik sederhana, pengantar inferensi statistik
 
-## Jadual
+## Jadwal
 
-Berikut adalah jadual perkuliahan Teori Peluang semester genap 2025/2026
+Berikut adalah jadwal\* perkuliahan Teori Peluang semester genap 2025/2026
 
-| Pekan           | Topik                                   | Penyampaian/Keterangan                  |
-|------------------|-------------------------------|-----------------------|
-| P1(13/02/2026)  | Pengantar & gambaran umum               | Diagnostic quiz                        |
-| P2 (2/2/2026)   | –                                       | Libur awal Ramadhan         |
-| P3 (27/2/2026)  | Konsep peluang, ruang sampel & kejadian | Aktif                       |
-| P4 (6/3/2026)   | Hukum peluang & kombinatorik            | Aktif                       |
-| P5 (13/3/2026)  | Peluang bersyarat & Teorema Bayes       | Aktif                       |
-| P6 (20/3/2026)  | –                                       | Cuti bersama Idul Fitri     |
-| P7 (27/3/2026)  | Variabel acak (konsep dasar)            | Aktif                       |
-| P8 (3/4/2026)   | –                                       | Libur nasional              |
-| P9 (10/4/2026)  | Variabel acak diskret & kontinu         | Aktif                       |
-| P10 (17/4/2026) | PMF, PDF, CDF                           | Aktif                       |
-| P11 (24/4/2026) | Ujian Tengah Semester                   | UTS                         |
-| P12 (1/5/2026)  | –                                       | Libur nasional (Hari Buruh) |
-| P13 (8/5/2026)  | Nilai harapan & varians                 | Aktif                       |
-| P14 (15/5/2026) | –                                       | Cuti bersama                |
-| P15 (22/5/2026) | Distribusi Binomial & Poisson           | Aktif                       |
-| P16 (29/5/2026) | Distribusi Normal & Eksponensial        | Aktif                       |
-| P17 (5/6/2026)  | Distribusi t & Chi-kuadrat              | Aktif                       |
-| P18 (12/6/2026) | Distribusi F & aproksimasi              | Aktif                       |
-| P19 (19/6/2026) | Ujian Akhir Semester                    | UAS                         |
+```{=tex}
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lll}
+\toprule
+\textbf{Pekan} & \textbf{Topik} & \textbf{Luaran / Keterangan} \\
+\midrule
+P1 (13/02/2026) & Pengantar \& gambaran umum & Diagnostic quiz \\
 
+P2 (20/02/2026) & -- & \textcolor{red}{Libur awal Ramadhan} \\
+
+P3 (27/02/2026) & Basic principle of counting, permutasi \& kombinasi & Latihan soal 1 \\
+
+P4 (06/03/2026) & Ruang sampel, aksioma peluang \& proposisinya & \textcolor{blue}{Tugas 1} \\
+
+P5 (13/03/2026) & Peluang bersyarat \& Teorema Bayes & Pengumpulan \textit{notes} (1) \\
+
+P6 (20/03/2026) & -- & \textcolor{red}{Cuti bersama Idul Fitri} \\
+
+P7 (27/03/2026) & Variabel acak diskret, ekspektasi \& variansi & Latihan soal 2 \\
+
+P8 (03/04/2026) & -- & \textcolor{red}{Libur nasional} \\
+
+P9 (10/04/2026) & Distribusi diskret: Bernoulli, Binomial, Poisson & \textcolor{blue}{Tugas 2}, \textit{mock} UTS  \\
+
+P10 (17/04/2026) & \textbf{Ujian Tengah Semester} & Pengumpulan \textit{notes} (2)  \\
+
+P11 (24/04/2026) & V.A. kontinu, ekspektasi, variansi, uniform & Latihan soal 3 \\
+
+P12 (01/05/2026) & -- & \textcolor{red}{Libur nasional (Hari Buruh)} \\
+
+P13 (08/05/2026) & Distribusi normal \& eksponensial & \textcolor{blue}{Tugas 3} \\
+
+P14 (15/05/2026) & -- & \textcolor{red}{Cuti bersama} \\
+
+P15 (22/05/2026) & Studi kasus: \textit{open-ended probability case} & -- \\
+
+P16 (29/05/2026) & Studi kasus: presentasi & Presentasi \\
+
+P17 (05/06/2026) & Review materi & Latihan soal 4, \textit{mock} UAS \\
+
+P18 (12/06/2026) & Diskusi bebas / tutorial & -- \\
+
+P19 (19/06/2026) & \textbf{Ujian Akhir Semester} & Pengumpulan \textit{notes} (3) \\
+\bottomrule
+\end{tabular}
+\vspace{0.5em}
+{\footnotesize
+*Catatan: Jadwal dapat berubah sesuai kebijakan akademik.
+}
+\end{table}
+```
 ## Strategi Pembelajaran
 
 -   Penjelasan konsep dan ilustrasi
 -   Diskusi dan latihan soal
+-   Kerja mandiri
 -   Analisis contoh data sederhana
--   Proyek mini berbasis data pendidikan
+-   Proyek mini
 
-## Buku Teks
+## Referensi
 
 Buku teks utama untuk kuliah ini adalah:
 
-- Casella, G., & Berger, R.L. (2002). *Statistical inference (2nd ed)*. Duxbury.
+-   Ross, S. M. (2019). A first course in probability. Pearson Boston
+-   Casella, G., & Berger, R.L. (2002). *Statistical inference (2nd ed)*. Duxbury.
 
-Tidak semua bab dalam buku ini akan dipelajari. Hanya bagian-bagian tertentu saja yang relevan dengan topik kuliah perlu untuk dibaca mahasiswa untuk menambah dan memperkuat pengetahuan mereka. Adapun suplemen lainnya adalah
-
-- 
+*Catatan*: Tidak semua bab dalam buku ini akan dipelajari. Hanya bagian-bagian tertentu saja yang relevan dengan topik kuliah perlu untuk dibaca untuk menambah dan memperkuat dan memperkaya pengetahuan.
 
 ## Penilaian
 
-| Komponen     | Keterangan               |
-|--------------|--------------------------|
-| Kuis & Tugas | Pemahaman konsep         |
-| UTS          | Evaluasi tengah semester |
-| Proyek Mini  | Penerapan konsep peluang |
-| UAS          | Evaluasi akhir semester  |
-
-Penilaian menekankan **proses berpikir dan pemahaman konsep**, bukan hafalan rumus.
+| Komponen          | Keterangan                   |
+|-------------------|------------------------------|
+| Tugas (30%)       | 3 $\times$ tugas terstruktur |
+| UTS (20%)         | Evaluasi tengah semester     |
+| Proyek Mini (10%) | Studi kasus                  |
+| UAS (25%)         | Evaluasi akhir semester      |
+| Catatan (15%)     | catatan mandiri mahasiswa    |

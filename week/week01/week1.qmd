@@ -1,6 +1,6 @@
 ---
 title: "Teori Peluang"
-subtitle: "Pekan 2 – Konsep Peluang, Ruang Sampel, dan Kejadian"
+subtitle: "Pekan 2 – Kaidah Kombinatorial"
 author:
   - name: Indira Puteri Kinasih
     orcid: 0009-0009-6959-6723
@@ -13,6 +13,10 @@ format:
     chalkboard: false
     toc: false
     toc-depth: 1
+    transition: fade
+    auto-stretch: false
+    width: 1250  # 1050
+    height: 760  # 700
 execute:
   echo: false
 ---
@@ -21,154 +25,228 @@ execute:
 
 Setelah perkuliahan ini, mahasiswa diharapkan mampu:
 
- - menjelaskan konsep dasar peluang
- - menentukan ruang sampel suatu percobaan acak
- - mengidentifikasi kejadian dalam ruang sampel
+- Memahami mengapa teknik menghitung penting dalam peluang
 
----
+- Menggunakan aturan perkalian (*basic counting principle*)
 
-## Mengingat Kembali
+- Membedakan dan menerapkan:
 
-Pada pekan sebelumnya, kita telah membahas:
+   - Permutasi
+   - Kombinasi
 
-- apa itu Teori Peluang
-- posisi mata kuliah dalam kurikulum
-- gambaran umum materi semester
+- Menyelesaikan soal peluang sederhana berbasis *counting*
 
-Hari ini kita mulai **materi inti pertama**.
+## "*Mengapa kombinatorial penting?*"
 
----
+Sebuah sistem komunikasi terdiri dari $n$ antena yang disusun berjajar.
 
-## Percobaan Acak
+- Sebagian antena bisa rusak (0), sisanya berfungsi (1)
+- Sistem disebut berfungsi jika tidak ada dua antena rusak yang bersebelahan
+- contoh: $n = 4$ and $m = 2$, dimana $m$ adalah banyaknya antena yang rusak
+- berarti ada 6 konfigurasi/susunan yang mungkin:
 
-**Percobaan acak** adalah proses yang:
+$$
+\begin{matrix}
+0 & 1 & 1 & 0 \\
+0 & 1 & 0 & 1 \\
+1 & 0 & 1 & 0 \\
+0 & 0 & 1 & 1 \\
+1 & 0 & 0 & 1 \\
+1 & 1 & 0 & 0
+\end{matrix}
+$$
 
-- dapat diulang
-- hasilnya tidak dapat diprediksi secara pasti
-- memiliki himpunan hasil yang jelas
+## Aturan perkalian
 
-Contoh:
+::: {.callout-note}
+### Aturan Perkalian
 
-- melempar koin
-- melempar dadu
-- memilih satu siswa secara acak
+Misalkan dua percobaan dilakukan. Jika eksperimen 1 dapat menghasilkan $m$ hasil yang mungkin, dan jika untuk setiap hasil di eksperimen 1, ada $n$ hasil yang mungkin pada eksperimen 2, maka, secara keseluruhan ada $mn$ hasil yang mungkin dari keduanya
+:::
 
----
 
-## Ruang Sampel
 
-**Ruang sampel (S)** adalah himpunan semua hasil yang mungkin dari suatu percobaan acak.
+$$
+\begin{array}{lll}
+(1,1), & (1,2), & \ldots,\ (1,n) \\
+(2,1), & (2,2), & \ldots,\ (2,n) \\
+\vdots & \vdots & \vdots \\
+(m,1), & (m,2), & \ldots,\ (m,n)
+\end{array}
+$$
 
-Contoh:
+## Contoh 1a
 
-- Lempar 1 koin → S = {A, G}
-- Lempar 1 dadu → S = {1, 2, 3, 4, 5, 6}
+Suatu program studi memiliki 5 kelas, dan setiap kelas terdiri dari 30 mahasiswa. Jika akan dipilih satu kelas dan satu mahasiswa dari kelas tersebut, berapa banyak kemungkinan pilihan?
 
----
+**Solusi**
 
-## Kejadian
 
-**Kejadian (A)** adalah himpunan bagian dari ruang sampel.
+## Secara umum...
 
-Contoh:
+::: {.callout-note}
+### Aturan perkalian yang diperumum
 
-- $A$ $=$ muncul angka genap pada dadu
-- $A = {2, 4, 6}$
+Misalkan ada $r$ percobaan sedemikian sehingga percobaan pertama menghsilkan $n_1$ kemungkinan hasil; dan jika untuk setiap hasil tersebut, ada $n_2$ hasil yang mungkin pada percobaan kedua; dan jika untuk setiap hasil yang mungkin pada dua percobaan pertama, ada $n_3$ hasil yang mungkin pada percobaan ketiga; dan seterusnya..., maka terdapat total $n_1\ .\ n_2\ \dots\ n_r$ hasil yang mungkin dari $r$ percobaan tersebut
+:::
 
-📌 Kejadian bisa terdiri dari satu atau lebih hasil.
+## Contoh 1b
 
----
+Suatu sekolah memiliki 2 guru Matematika, 3 guru IPA, 4 guru Bahasa, dan 2 guru IPS. Akan dipilih tim kecil yang terdiri dari satu guru dari setiap bidang.
 
-## Hubungan Ruang Sampel dan Kejadian
+**Solusi:**
 
-- S = ruang sampel
-- A ⊆ S
 
-Setiap kejadian **selalu** bagian dari ruang sampel.
+## Contoh 1c
 
----
+Ada berapa plat nomor kendaraan yang mungkin disusun jika 2 digit pertama berisi huruf dan 4 digit berikutnya berisi angka?
 
-## Konsep Peluang
+**Solusi**
 
-Secara intuitif, peluang menyatakan:
 
-> seberapa mungkin suatu kejadian terjadi
+## Permutasi: Urutan itu penting
 
-Untuk ruang sampel berhingga dan peluang sama:
+> *Berapa banyak susunan yang mungkin dari huruf $a$, $b$, dan $c$?*
 
-$P(A) = \frac{n(A)}{n(S)} $
+- semua kemungkinan susunannya adalah: 
 
----
+$$
+abc,acb,bac,bca,cba
+$$
 
-## Contoh Perhitungan
+- Total ada 6 susunan berbeda
 
-Melempar sebuah dadu:
+- Setiap susunan berurutan seperti ini disebut **permutasi**.
 
-- $S = {1,2,3,4,5,6}$
-- $A = muncul bilangan genap = {2,4,6}$
+## Permutasi: kaitannya dengan aturan perkalian
 
-$P(A) = \frac{3}{6} = \frac{1}{2}$
+Untuk menyusun 3 huruf:
 
----
+- Posisi pertama: 3 pilihan
 
-## Catatan Penting
+- Posisi kedua: 2 pilihan tersisa
 
-- Peluang **bukan tebakan**
-- Peluang bergantung pada **struktur ruang sampel**
-- Ruang sampel harus ditentukan dengan benar
+- Posisi ketiga: 1 pilihan tersisa
 
----
+Dengan prinsip dasar penghitungan: $3 \times 2 \times 1 = 6$
 
-## Kesalahan Umum Mahasiswa
+::: {.callout-important}
+### Permutasi
 
-- tidak menuliskan ruang sampel
-- mencampur hasil dan kejadian
-- menghitung tanpa mendefinisikan A dan S
+$$
+n! = n\ . (n-1)\ . (n-2)\ \dots\ 3\ . 2\ .1
+$$
 
-➡️ Biasakan **tulis dulu S dan A**.
+:::
 
----
+::: aside
+note: notasi $!$ dibaca *faktorial* 
+:::
 
-## Contoh Kontekstual (Pendidikan)
 
-Dalam satu kelas terdapat:
+## Contoh 1d
 
-- 12 siswa laki-laki
-- 18 siswa perempuan
+Misalkan kelas teori peluang terdiri dari 7 mahasiswa dan 5 mahasiswi. Mereka diberikan suatu ujian, dan mereka akan dirangking berdasarkan hasil ujian tersebut. Asumsinya, tidak ada 2 mahasiswa/i yang memiliki nilai sama.
 
-Jika satu siswa dipilih secara acak:
+ - berapa komposisi ranking berbeda yang mungkin?
+ - Jika mahasiswa dirangking hanya diantara sesama mereka, begitu juga mahasiswi, berapa susunan rangking yang mungkin?
 
-- tentukan ruang sampel
-- tentukan peluang terpilih siswa perempuan
+*Solusi:*
 
----
+## Permutasi dengan objek yang sama
 
-## Latihan Mandiri
+> *Berapa banyak susunan huruf berbeda dari kata "STATISTIKA"?*
 
-1. Tentukan ruang sampel dari:
+- kata "STATISTIKA" terdiri dari 10 huruf;
 
-   - melempar dua koin
-   - melempar satu koin dan satu dadu
+- jika setiap huruf dianggap berbeda, dan sesuai dengan kaidah permutasi, maka banyaknya susunan yang berbeda adalah $6! = \dots$
+
+- tapi, apakah itu sudah benar?
+
+$$
+S_1\ T_1\ A_1\ T_2\ I_1\ S_2\ T_3\ I_2\ K\ A_2
+$$
+
+- tentu BELUM BENAR! karena
    
-2. Tentukan kejadian dan peluangnya
+   - menukar $S_1$ dengan $S_2$ akan menghasilkan susunan yg sama saja
+   - demikian juga huruf kembar lainnya
 
----
+## (cont'd)
 
-## Ringkasan Pekan 2
+$$
+S_1\ T_1\ A_1\ T_2\ I_1\ S_2\ T_3\ I_2\ K\ A_2
+$$
 
-Hari ini kita belajar:
+- huruf $S$ dapat dipertukarkan sebanyak $2!$ cara
+- huruf $T$ dapat dipertukarkan sebanyak $3!$ cara
+- huruf $A$ dapat dipertukarkan sebanyak $2!$ cara
+- huruf $I$ dapat dipertukarkan sebanyak $2!$ cara
 
-- percobaan acak
-- ruang sampel
-- kejadian
-- konsep peluang dasar
+:::{.callout style="background-color:#eeeeee;"}
 
-Ini adalah **fondasi** untuk materi berikutnya.
+Karena pertukaran huruf yg sama tidak akan menghasilkan susunan baru, 
+maka kita harus membagi $\frac{6!}{2!\ . 3!\ . 2!\ . 2!\ }=\dots$
 
----
+:::
 
-## Pekan Berikutnya
+## Kombinasi: urutan tidaklah penting
 
-### 👉 Hukum-hukum peluang dan kombinatorik
+- Kita sering ingin mengetahui berapa banyak kelompok berukuran $r$ 
+yang dapat dibentuk dari $n$ objek.
 
-Siapkan diri Anda 🙂
+- Contoh: "*Berapa banyak cara memilih 2 objek dari 4 objek:
+A, B, C, D?*"
+
+- jika memakai kaidah permutasi, maka $\dots$
+- jika memakai kombinasi $\dots$
+
+## Kombinasi (contd')
+
+::: callout-note
+# Notasi & Terminologi
+
+untuk $r \le n$, $\binom{n}{r}$ didefinisikan sebagai
+
+$$
+\binom{n}{r} = \frac{n!}{(n-r)! \, r!}
+$${#eq-comb}
+
+$\binom{n}{r}$ menyatakan banyaknya
+kombinasi dari $n$ objek yang diambil $r$ sekaligus.
+
+:::
+
+Jadi, $\binom{n}{r}$ menyatakan jumlah cara memilih 
+$r$ objek dari $n$ objek [**tanpa memperhatikan urutan**]{.ubdred}.
+
+## Contoh 1f
+
+dari 12 mahasiswa, akan dipilih 5 orang untuk menjadi pengurus himpunan. Berapa banyak komposisi tim yang mungkin dibentuk?
+
+*solusi*
+
+## Identitas kombinatorik
+
+$$
+\binom{n}{r} = \binom{n-1}{r-1}+\binom{n-1}{r}, \ 1\leq r \le n
+$$ {#eq-idtcomb}
+
+- Misalkan ada $n$ orang, dan kita ingin memilih $r$ orang untuk membentuk tim.
+- Fokus pada satu orang tertentu (misal: [**Dika**]{.ubdblue}).
+- Setiap tim ukuran $r$ pasti termasuk salah satu dari dua jenis:
+
+    1. Tim yang ada [**Dika**]{.ubdblue}-nya $\longrightarrow$ $\binom{n-1}{r-1}$
+       
+    2. Tim yang tidak ada [**Dika**]{.ubdblue}-nya $\longrightarrow$ $\binom{n-1}{r}$
+- Karena semua komposisi tim pasti terdiri dari komposisi (1) + (2), maka dapat ditulis seperti pada @eq-idtcomb
+
+## Teorema Binomial
+
+nilai $\binom{n}{r}$ disebut juga sebagai koefisien binomial
+
+
+
+$$
+(x+y)^n = \sum_{k=0}^n\binom{n}{k}x^ky^{n-k}
+$${#eq-binom}
