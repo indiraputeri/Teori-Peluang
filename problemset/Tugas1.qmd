@@ -1,0 +1,103 @@
+---
+title: ""
+subtitle: ""
+author: ""
+date: ""
+format:
+  pdf:
+    geometry: margin=1in
+    fontsize: 11pt
+    documentclass: article
+execute:
+  echo: false
+---
+
+\thispagestyle{empty}
+
+```{=tex}
+\begin{center}
+
+\vspace*{2cm}
+
+{\LARGE\bfseries TUGAS 1 \\[0.3cm]}
+
+{\Large Teori Peluang \\[0.2cm]}
+{\large\bfseries{\textcolor{blue}{Analisis Kombinatorik \\[0.6cm]}}}
+
+{\normalsize
+Pengampu: Indira P. Kinasih\\
+\texttt{indiraputeri@uinmataram.ac.id}
+\\[0.6cm]
+}
+
+{\large Semester Genap 2025/2026 \\[0.1cm]}
+
+{\normalsize
+\textbf{\textcolor{red}{Pengumpulan: 27 Februari 2026}}
+}
+
+\end{center}
+
+```
+
+## Soal
+
+1. Sebuah plat nomor terdiri dari 2 huruf diikuti 4 angka.
+
+   a. Berapa banyak plat nomor yang dapat dibuat jika huruf dan angka boleh berulang?
+   b. Berapa banyak plat nomor yang dapat dibuat jika tidak boleh ada huruf atau angka yang berulang dalam satu plat?
+
+2. Di sebuah rak terdapat:
+
+   - 3 buku Matematika,
+   - 2 buku Statistika,
+   - 1 buku Fisika.
+
+   Semua buku berbeda.
+   
+    a. Berapa banyak susunan berbeda yang mungkin?
+    b. Berapa banyak susunan jika semua buku Matematika harus berdampingan?
+
+3. Dari 6 mahasiswa laki-laki dan 5 mahasiswa perempuan akan dipilih panitia yang terdiri dari 2 laki-laki dan 3 perempuan.
+
+    a. Berapa banyak panitia yang dapat dibentuk?
+    b. Jika dua mahasiswa laki-laki tertentu tidak boleh berada dalam panitia yang sama, berapa banyak panitia yang mungkin?
+
+4. Sepuluh mahasiswa akan dibagi menjadi:
+
+   - 4 orang Kelompok A,
+   - 3 orang Kelompok B,
+   - 3 orang Kelompok C.
+
+   Berapa banyak cara pembagian yang mungkin?
+
+   (\textcolor{red}{Petunjuk: gunakan konsep koefisien multinomial.})
+
+5. Delapan mahasiswa akan duduk berjajar di satu baris kursi.
+
+   a. Berapa banyak susunan tempat duduk yang mungkin tanpa batasan?
+   b. Jika dua mahasiswa tertentu harus duduk berdampingan, berapa banyak susunan yang mungkin?
+   c. Jika dua mahasiswa tersebut tidak boleh duduk berdampingan, berapa banyak susunan yang mungkin?
+   
+6. Dari titik $A$ ke titik $B$ seseorang hanya boleh bergerak ke kanan atau ke atas. Untuk mencapai $B$, diperlukan 5 langkah ke kanan dan 4 langkah ke atas.
+
+   a. Berapa banyak jalur berbeda yang mungkin?
+   b. Berapa banyak jalur yang melewati titik tertentu yang berada 2 langkah ke kanan dan 1 langkah ke atas dari $A$?
+
+7. Sebuah lift berangkat dari lantai dasar dengan membawa 8 orang (tidak termasuk operator lift) dan menurunkan mereka semua sebelum mencapai lantai teratas, yaitu lantai 6.
+   - Dalam berapa banyak cara operator dapat mengamati orang-orang tersebut turun dari lift jika semua orang tampak sama baginya?
+
+   - Bagaimana jika 8 orang tersebut terdiri dari 5 laki-laki dan 3 perempuan, dan operator dapat membedakan antara laki-laki dan perempuan?
+
+8. Uraikan $(3x^2+y)^5$
+
+9. Dalam satu baris terdapat 7 kursi dan akan diduduki oleh 4 mahasiswa dan 3 mahasiswi.
+
+   a. Berapa banyak susunan duduk yang mungkin?
+   b. Berapa banyak susunan jika tidak boleh ada dua mahasiswi duduk berdampingan?
+
+10. Seorang dosen memiliki 8 soal berbeda yang akan dibagikan kepada 3 kelas berbeda.
+
+    a. Berapa banyak cara pembagian jika setiap soal boleh diberikan ke kelas mana pun?
+    b. Berapa banyak cara jika setiap kelas harus menerima minimal satu soal?
+   

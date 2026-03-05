@@ -1,6 +1,6 @@
 ---
 title: "Teori Peluang"
-subtitle: "Pekan 3 – Hukum-Hukum Peluang dan Kombinatorik"
+subtitle: "Pekan 3 – Aksioma Peluang"
 author:
   - name: Indira Puteri Kinasih
     orcid: 0009-0009-6959-6723
@@ -13,6 +13,10 @@ format:
     chalkboard: false
     toc: false
     toc-depth: 1
+    transition: fade
+    auto-stretch: false
+    width: 1250  # 1050
+    height: 760  # 700
 execute:
   echo: false
 ---
@@ -21,330 +25,315 @@ execute:
 
 Setelah perkuliahan ini, mahasiswa diharapkan mampu:
 
-- menjelaskan hukum-hukum dasar peluang
-- menggunakan aturan penjumlahan dan perkalian peluang
-- menyelesaikan masalah peluang sederhana menggunakan konsep kombinatorik
+- Menjelaskan konsep *sample space* dan *event*
+- Memahami operasi pada kejadian ($\cap$, $\cup$, dan komplemen)
+- Memahami 3 aksioma peluang
+- Menurunkan sifat-sifat dasar peluang dari aksioma
 
----
 
-## Mengingat Kembali
+# Review: eksperimen, *Sample Space & Event*
 
-Pada pekan sebelumnya, kita telah membahas:
+## A. Eksperimen & Ruang Sampel
 
-- apa itu Teori Peluang
-- posisi mata kuliah dalam kurikulum
-- gambaran umum materi semester
+::: {.callout-note}
+### Definisi
+Suatu **eksperimen/percobaan** adalah proses apapun yang menghasilkan observasi atau hasil(*outcome*). Sedangkan, himpunan semua hasil yang mungkin dari suatu percobaan disebut sebagai **ruang sampel**(*sample space*), dinotasikan dengan $S$
+:::
 
-Hari ini kita mulai **materi inti pertama**.
+**Contoh**:
 
----
+1. Jika hasil eksperimen merupakan gender dari bayi yang baru lahir di rumah bersalin, maka
+    $$
+    S = \{l, p\}
+    $$
+    dimana $l$ adalah bayi laki-laki, dan $p$ adalah bayi perempuan.
 
-## Percobaan Acak
+## (contd') - Contoh
 
-**Percobaan acak** adalah proses yang:
+2. Jika eksperimen berupa pelantunan 2 keping koin dan mencatat hasil yang muncul: angka atau gambar, maka:
+   $$
+   S =  \{(AA),(AG),(GG),(GA)\}
+   $$
 
-- dapat diulang
-- hasilnya tidak dapat diprediksi secara pasti
-- memiliki himpunan hasil yang jelas
+3. Jika hasil dari eksperimen adalah urutan finish 10 peserta lomba *trail run*, maka 
 
-Contoh:
+   $$
+   S = \{semua \  permutasi\ 10!\ dari (1,2,3,4,5,6,7,8,9,10)\}
+   $$
 
-- melempar koin
-- melempar dadu
-- memilih satu siswa secara acak
+4. Misalkan eksperimen dilakukan dengan melantunkan 2 dadu (dadu 1 & dadu 2) bersisi 6. Kita dapat merepresentasikan hasil eksperimen ini dengan pasangan $i,j$ (masing-masing sisi dadu yang menghadap ke atas), dimana $i$ adalah nilai mata dadu 1 dan $j$ adalah nilai mata dadu 2, sehingga 
 
----
+  $$
+  S = \{(i,j): i,j=1,2,3,\dots,6\}
+  $$
 
-## Ruang Sampel
 
-**Ruang sampel (S)** adalah himpunan semua hasil yang mungkin dari suatu percobaan acak.
+## B. Kejadian (*event*)
 
-Contoh:
+:::{.callout-note}
 
-- Lempar 1 koin → S = {A, G}
-- Lempar 1 dadu → S = {1, 2, 3, 4, 5, 6}
+Semua himpunan hasil eksperimen disebut **kejadian**. Kejadian dinotasikan dengan abjad $A,B,C,\dots$. Dikatakan kejadian $A$ muncul/terjadi ketika hasil termuat di $A$
 
----
+:::
 
-## Kejadian
+**Contoh**
 
-**Kejadian (A)** adalah himpunan bagian dari ruang sampel.
+1. Pada contoh A1, jika $A = \{l\}$, artinya $A$ adalah **kejadian** dimana bayi adalah laki-laki. Demikian juga jika $B = \{p\}$, artinya $B$ adalah **kejadian** dimana bayi adalah perempuan
 
-Contoh:
+2. Pada contoh A2, misalkan $A = \{(AG), (GG)\}$, maknanya $A$ adalah kejadian dimana muncul gambar pada koin ke-2 
 
-- $A$ $=$ muncul angka genap pada dadu
-- $A = {2, 4, 6}$
+## (contd') - Contoh
 
-📌 Kejadian bisa terdiri dari satu atau lebih hasil.
+3. Pada contoh A3, misalkan 
+   $$
+   B = \{\texttt{semua hasil di}\ S\ \texttt{yang dimulai dari 5}\}
+   $$
+   maka artinya $B$ adalah kejadian dimana pelari nomor 5 berada di peringkat 1 *trailrun*
 
----
-
-## Hubungan Ruang Sampel dan Kejadian
-
-- S = ruang sampel
-- A ⊆ S
-
-Setiap kejadian **selalu** bagian dari ruang sampel.
-
----
-
-## Konsep Peluang
-
-Secara intuitif, peluang menyatakan:
-
-> seberapa mungkin suatu kejadian terjadi
-
-Untuk ruang sampel berhingga dan peluang sama:
-
-$P(A) = \frac{n(A)}{n(S)} $
-
----
-
-## Contoh Perhitungan
-
-Melempar sebuah dadu:
-
-- $S = {1,2,3,4,5,6}$
-- $A = muncul bilangan genap = {2,4,6}$
-
-$P(A) = \frac{3}{6} = \frac{1}{2}$
-
----
-
-## Catatan Penting
-
-- Peluang **bukan tebakan**
-- Peluang bergantung pada **struktur ruang sampel**
-- Ruang sampel harus ditentukan dengan benar
-
----
-
-## Kesalahan Umum Mahasiswa
-
-- tidak menuliskan ruang sampel
-- mencampur hasil dan kejadian
-- menghitung tanpa mendefinisikan A dan S
-
-➡️ Biasakan **tulis dulu S dan A**.
-
----
-
-## Contoh Kontekstual (Pendidikan)
-
-Dalam satu kelas terdapat:
-
-- 12 siswa laki-laki
-- 18 siswa perempuan
-
-Jika satu siswa dipilih secara acak:
-
-- tentukan ruang sampel
-- tentukan peluang terpilih siswa perempuan
-
----
-
-## Latihan Mandiri
-
-1. Tentukan ruang sampel dari:
-
-   - melempar dua koin
-   - melempar satu koin dan satu dadu
+4. Pada contoh A4, misalkan
+    $$
+    B = \{(4,5), (3,6), (5,4),(6,3)\}
+    $$
+   maka, artinya $B$ adalah kejadian dimana jumlah 2 dadu yang dilantunkan adalah 9
    
-2. Tentukan kejadian dan peluangnya
+# Operasi pada Kejadian
 
----
 
-## Ringkasan Pekan 2
+## Gabungan & Irisan
 
-Hari ini kita belajar:
+untuk setiap kejadian $A$ dan $B$, kita dapat mendefinisikan kejadian baru, yaitu:
 
-- percobaan acak
-- ruang sampel
-- kejadian
-- konsep peluang dasar
+::: {.callout-note}
+## Gabungan kejadian 
+$$
+A \cup B
+$$
 
-Ini adalah **fondasi** untuk materi berikutnya.
+$A \cup B$ terdiri dari semua hasil pada $A$ atau $B$ atau pada keduanya. Dengan kata lain, $A \cup B$ akan terjadi jika $A$ atau $B$ terjadi.
 
----
+:::
 
-## Pekan Berikutnya
 
-### 👉 Hukum-hukum peluang dan kombinatorik
+**Contoh**
 
-Siapkan diri Anda 🙂
+- pada contoh **A3**, misal $A = \{\texttt{semua hasil yang dimulai dari 5}\}$ dan $B = \{\texttt{semua hasil dengan 3 selalu di posisi kedua}\}$, maka $A \cup B$ adalah kejadian dimana pelari 5 jadi juara atau pelari 3 jadi juara kedua, atau keduanya.
 
-## Mengingat Kembali
+## Contd'
 
-Pada pekan sebelumnya, kita telah membahas:
+kejadian baru lainnya, yaitu:
 
-- percobaan acak
-- ruang sampel
-- kejadian
-- peluang kejadian sederhana
+::: {.callout-note}
+## Irisan kejadian 
+$$
+A \cap B
+$$
 
-Hari ini kita akan **memperluas cara menghitung peluang**.
+$A \cap B$ merupakan semua hasil yang ada baik di $A$ dan juga di $B$. Dengan kata lain, $A \cap B$ akan terjadi jika $A$ dan $B$ terjadi.
 
----
+:::
 
-## Hukum Peluang Dasar
+**Contoh**
 
-Untuk setiap kejadian A:
+- Pada contoh A2, jika $A = \{(AA), (AG)\}$ adalah kejadian dimana koin pertama muncul angka dan $B = \{(AG), (GG)\}$ adalah kejadian dimana koin kedua muncul gambar, maka $A \cap B = \{(AG)\}$ adalah kejadian dimana koin pertama muncul angka dan koin kedua muncul gambar
 
-- $0 \le P(A) \le 1$
-- $P(S) = 1$
-- $P(\emptyset) = 0$
 
-Hukum ini menjadi dasar semua perhitungan peluang.
+## Kejadian saling lepas/saling eksklusif 
 
----
+- pada contoh **A3**, jika $A$ adalah kejadian dimana pelari 2 menang dan $B$ adalah kejadian dimana pelari 3 menang, maka kejadian $A \cap B$ tidak memuat hasil apapun, dengan kata lain itu tidak mungkin terjadi. 
 
-## Hukum Penjumlahan Peluang
+- kejadian tanpa hasil seperti ini disebut sebagai kejadian kosong dan dinotasikan dengan $\varnothing$
 
-Untuk dua kejadian A dan B:
+::: {.callout-note}
 
-$P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+Jika irisan dari $A$ dan $B$ adalah kejadian kosong, maka karena $A$ dan $B$ tidak dapat terjadi secara bersamaan, dikatakan $A$ dan $B$ saling lepas (*disjoint*) atau saling eksklusif (*mutually exclusive*)
 
-Jika A dan B **saling lepas**:
+$$
+A \cap B = \varnothing
+$$
+:::
 
-$P(A \cup B) = P(A) + P(B)$
 
----
+## Komplemen Kejadian
 
-## Contoh Hukum Penjumlahan
+:::{.callout-note}
+untuk setiap kejadian $A$, didefinisikan $A^c$
+yang merupakan semua hasil pada ruang sampel yang **tidak berada** di $A$
+:::
 
-Melempar sebuah dadu:
+- Pada contoh A1, jika $A = \{p\}$ adalah kejadian dimana bayi yang lahir adalah perempuan, maka $A^c = \{l\}$.
 
-- A = muncul bilangan genap
-- B = muncul bilangan lebih dari 4
+- komplemen dari ruang sampel adalah himpunan kosong, sehingga $S^c=\varnothing$
 
-Hitung $P(A \cup B)$.
 
----
+## Aturan Dasar Operasi Kejadian 
 
-## Hukum Perkalian Peluang
+- Misal $A$, $B$, dan $C$ adalah kejadian-kejadian, berikut adalah sifat dan hubungan yang berlaku:
 
-Untuk dua kejadian A dan B:
+::: columns
+::: {.column width="50%"}
+::: {.callout-important}
+## Sifat Komutatif
 
-$P(A \cap B) = P(A) \times P(B|A)$
+$$
+A \cup B = B \cup A
+$$
 
-Jika A dan B **saling bebas (independen)**:
+$$
+A \cap B = B \cap A
+$$
+:::
 
-$P(A \cap B) = P(A) \times P(B)$
+::: {.callout-important}
 
----
+## Sifat Asosiatif
 
-## Contoh Hukum Perkalian
+$$
+(A \cup B)\cup C = A \cup (B \cup C)
+$$
 
-Melempar dua koin secara bersamaan:
+$$
+(A \cap B)\cap C = A \cap (B \cap C)
+$$
+:::
+:::
 
-- peluang muncul dua gambar?
+::: {.column width="50%"}
+::: {.callout-important}
+## Sifat Distributif
 
-Gunakan hukum perkalian.
+$$
+(E \cup F)\cap G = (E\cap G)\cup(F\cap G)
+$$
 
----
+:::
+::: {.callout-important}
+## Hukum De Morgan *
 
-## Kejadian Saling Lepas vs Bebas
+Hubungan dari tiga sifat dasar (distributif, asosiatif, komutatif) dalam membentuk gabungan, irisan dan komplemen terwujud dalam hukum De Morgan
 
-- **Saling lepas**: tidak bisa terjadi bersama
-- **Saling bebas**: kejadian satu tidak memengaruhi kejadian lain
+$$
+\left(\bigcup_{i=1}^n E_i\right)^c
+=
+\bigcap_{i=1}^n E_i^c
+$$
 
-📌 Ini dua konsep berbeda dan sering tertukar.
+$$
+\left(\bigcap_{i=1}^n E_i\right)^c
+=
+\bigcup_{i=1}^n E_i^c
+$$
+:::
+:::
+:::
 
----
 
-## Mengapa Perlu Kombinatorik?
 
-Untuk ruang sampel besar:
-- menulis semua anggota $S$ tidak efisien
-- perlu cara menghitung banyaknya kemungkinan
+## Definisi Formal: Aksioma Peluang
 
-Di sinilah **kombinatorik** digunakan.
+:::: {.columns}
 
----
+::: {.column width="50%"}
 
-## Aturan Perkalian
+::: {.callout-note appearance="simple"}
+### Aksioma 1 — Non-Negativity
 
-Jika suatu proses terdiri dari:
-- tahap 1: $n$ cara
-- tahap 2: $m$ cara
+Setiap peluang bernilai tidak negatif.
 
-Maka seluruh proses memiliki:
+$$
+P(E) \ge 0
+$$
+:::
 
-$n \times m$ kemungkinan.
+::: {.callout-note appearance="simple"}
+### Aksioma 2 — Normalisasi
 
----
+Peluang dari ruang sampel bernilai satu.
 
-## Permutasi
+$$
+P(S) = 1
+$$
+:::
 
-**Permutasi** adalah penyusunan objek dengan memperhatikan urutan.
+:::
 
-$P(n,r) = \frac{n!}{(n-r)!}$
+::: {.column width="50%"}
 
-Contoh: menyusun 3 dari 5 siswa sebagai pengurus kelas.
+::: {.callout-important appearance="simple"}
+### Aksioma 3 — Additivitas
 
----
+Jika $E_1, E_2, \dots$ saling lepas (mutually exclusive),
 
-## Kombinasi
+$$
+P\left(\bigcup_{i=1}^{\infty} E_i\right)
+=
+\sum_{i=1}^{\infty} P(E_i)
+$$
+:::
 
-**Kombinasi** adalah pemilihan objek tanpa memperhatikan urutan.
+:::
 
-$C(n,r) = \frac{n!}{r!(n-r)!}$
+::::
 
-Contoh: memilih 3 siswa dari 5 siswa.
 
----
+## Konsekuensi Penting
 
-## Hubungan Kombinatorik dan Peluang
+:::: {.columns}
 
-Peluang sering dihitung sebagai:
+::: {.column width="50%"}
 
-$P(A) = \frac{\text{banyak kejadian yang diinginkan}}{\text{banyak ruang sampel}}$
+::: {.callout-tip appearance="simple"}
+### Peluang Komplemen
 
-Kombinatorik membantu menghitung pembilang dan penyebut.
+$$
+P(E^c) = 1 - P(E)
+$$
+:::
 
----
+::: {.callout-note appearance="simple"}
+### Jika $E \subset F$
 
-## Contoh Kontekstual (Pendidikan)
+$$
+P(E) \le P(F)
+$$
+:::
 
-Dari 10 siswa:
-- 6 perempuan
-- 4 laki-laki
+::: {.callout-important appearance="simple"}
+### Gabungan Dua Event
 
-Jika dipilih 2 siswa secara acak:
-- berapa peluang keduanya perempuan?
+$$
+P(E \cup F)
+=
+P(E) + P(F) - P(E \cap F)
+$$
 
-Gunakan kombinasi.
+:::
 
----
+:::
 
-## Kesalahan Umum Mahasiswa
+::: {.column width="50%"}
 
-- salah membedakan permutasi dan kombinasi
-- langsung pakai rumus tanpa memahami konteks
-- lupa mendefinisikan kejadian
+::: {.callout-warning appearance="simple"}
+### Prinsip Inklusi–Eksklusi
 
----
+Untuk $n$ kejadian:
 
-## Latihan Mandiri
+$$
+\begin{aligned}
+P(E_1 \cup E_2 \cup \dots \cup E_n)
+&=
+\sum_{i=1}^{n} P(E_i) \\
+&-
+\sum_{i<j} P(E_i E_j) \\
+&+
+\sum_{i<j<k} P(E_i E_j E_k) \\
+&-\dots \\
+&+(-1)^{n+1}P(E_1E_2\dots E_n)
+\end{aligned}
+$$
 
-1. Tentukan peluang dari:
-   - memilih 2 bola merah dari kantong berisi 3 merah dan 2 biru
-2. Tentukan apakah masalah menggunakan permutasi atau kombinasi
+:::
 
----
+:::
 
-## Ringkasan Pekan 3
+::::
 
-Hari ini kita belajar:
-
-- hukum penjumlahan dan perkalian peluang
-- kejadian saling lepas dan bebas
-- dasar-dasar kombinatorik
-
----
-
-## Pekan Berikutnya
-
-### 👉 Peluang bersyarat dan Teorema Bayes
-
-Siapkan diri Anda 🙂

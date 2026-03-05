@@ -82,35 +82,35 @@ Berikut adalah jadwal\* perkuliahan Teori Peluang semester genap 2025/2026
 \midrule
 P1 (13/02/2026) & Pengantar \& gambaran umum & Diagnostic quiz \\
 
-P2 (20/02/2026) & -- & \textcolor{red}{Libur awal Ramadhan} \\
+P2 (20/02/2026) & Basic principle of counting, permutasi \& kombinasi & Latihan soal 1 \\
 
-P3 (27/02/2026) & Basic principle of counting, permutasi \& kombinasi & Latihan soal 1 \\
+P3 (27/02/2026) & Ruang sampel, aksioma peluang \& proposisinya & \textcolor{blue}{Tugas 1} \\
 
-P4 (06/03/2026) & Ruang sampel, aksioma peluang \& proposisinya & \textcolor{blue}{Tugas 1} \\
+P4 (06/03/2026) & Peluang bersyarat \& Teorema Bayes & Pengumpulan \textit{notes} (1) \\
 
-P5 (13/03/2026) & Peluang bersyarat \& Teorema Bayes & Pengumpulan \textit{notes} (1) \\
+P5 (13/03/2026) & Variabel acak diskret, ekspektasi \& variansi & Latihan soal 2 \\
 
 P6 (20/03/2026) & -- & \textcolor{red}{Cuti bersama Idul Fitri} \\
 
-P7 (27/03/2026) & Variabel acak diskret, ekspektasi \& variansi & Latihan soal 2 \\
+P7 (27/03/2026) & Distribusi diskret: Bernoulli, Binomial, Poisson & \textcolor{blue}{Tugas 2}, \textit{mock} UTS  \\
 
 P8 (03/04/2026) & -- & \textcolor{red}{Libur nasional} \\
 
-P9 (10/04/2026) & Distribusi diskret: Bernoulli, Binomial, Poisson & \textcolor{blue}{Tugas 2}, \textit{mock} UTS  \\
+P9 (10/04/2026) & \textbf{Ujian Tengah Semester} & Pengumpulan \textit{notes} (2)  \\
 
-P10 (17/04/2026) & \textbf{Ujian Tengah Semester} & Pengumpulan \textit{notes} (2)  \\
+P10 (17/04/2026) & V.A. kontinu, ekspektasi, variansi, uniform & Latihan soal 3 \\
 
-P11 (24/04/2026) & V.A. kontinu, ekspektasi, variansi, uniform & Latihan soal 3 \\
+P11 (24/04/2026) & Distribusi normal \& eksponensial & \textcolor{blue}{Tugas 3} \\
 
 P12 (01/05/2026) & -- & \textcolor{red}{Libur nasional (Hari Buruh)} \\
 
-P13 (08/05/2026) & Distribusi normal \& eksponensial & \textcolor{blue}{Tugas 3} \\
+P13 (08/05/2026) & Studi kasus: \textit{open-ended probability case} & -- \\
 
 P14 (15/05/2026) & -- & \textcolor{red}{Cuti bersama} \\
 
-P15 (22/05/2026) & Studi kasus: \textit{open-ended probability case} & -- \\
+P15 (22/05/2026) & Studi kasus: presentasi 1 & Presentasi \\
 
-P16 (29/05/2026) & Studi kasus: presentasi & Presentasi \\
+P16 (29/05/2026) & Studi kasus: presentasi 2 & Presentasi \\
 
 P17 (05/06/2026) & Review materi & Latihan soal 4, \textit{mock} UAS \\
 

@@ -220,11 +220,41 @@ kombinasi dari $n$ objek yang diambil $r$ sekaligus.
 Jadi, $\binom{n}{r}$ menyatakan jumlah cara memilih 
 $r$ objek dari $n$ objek [**tanpa memperhatikan urutan**]{.ubdred}.
 
-## Contoh 1f
+## Contoh 1e
 
 dari 12 mahasiswa, akan dipilih 5 orang untuk menjadi pengurus himpunan. Berapa banyak komposisi tim yang mungkin dibentuk?
 
 *solusi*
+
+
+## Contoh 1f
+
+- Dari suatu kelompok yang terdiri atas 5 perempuan dan 7 laki-laki, berapa banyak panitia berbeda yang dapat dibentuk jika panitia tersebut terdiri dari 2 perempuan dan 3 laki-laki?
+
+- Bagaimana jika 2 dari laki-laki tersebut sedang berselisih dan menolak untuk berada dalam panitia yang sama?
+
+**solusi**:
+
+- cara memilih 2 dari 5 perempuan: $\binom{5}{2}$, cara memilih 3 dari 7 laki-laki: $\binom{7}{3}$. Maka berdasarkan aturan perkalian yang telah kita pelajari di slide sebelumnya, banyaknya panitia yang dapat terbentuk dari ketentuan tersebut adalah 
+
+$$
+\binom{5}{2} \times \binom{7}{3} = \dots
+$$
+
+## Contoh 1f (solusi *contd'*)
+
+- Sedangkan jika 2 dari laki-laki menolak berada dalam tim yang sama, maka (dengan kata lain) kita ingin mengetahui ada berapa susunan tim yang melibatkan mereka berdua, artinya **dari 3 orang laki-laki yang dipilih dari 7, akan hanya ada 1 orang dari 5 laki-laki selain mereka**, jadi: $\binom{5}{1} = 5$.
+
+- Dengan demikian, banyaknya susunan panitia yg mungkin dengan ketentuan 2 orang laki-laki tidak berada di tim yang sama adalah:
+
+$$
+\binom{7}{3} - \binom{5}{1} = \dots
+$$
+
+- Jika digabungkan dengan panitia perempuan maka banyaknya susunan panitia yang mungkin adalah
+$$
+\binom{5}{2}\times \left( \binom{7}{3} - \binom{5}{1} \right) = \dots
+$$
 
 ## Identitas kombinatorik
 
@@ -249,4 +279,50 @@ $$
 (x+y)^n = \sum_{k=0}^n\binom{n}{k}x^ky^{n-k}
 $${#eq-binom}
 
-## 
+**contoh**: misal kita ingin menguraikan $(x+y)^3$. Kita dapat menggunakan @eq-binom
+
+$$
+\begin{aligned}
+(x+y)^3 
+&= \binom{3}{0}x^0y^3 + \binom{3}{1}x^1y^2 + \binom{3}{2}x^2y^1 + \binom{3}{3}x^3y^0 \\
+&= y^3 + 3xy^2 + 3x^2y + x^3
+\end{aligned}
+$$
+
+## Koefisien Multinomial 
+
+jika $n_1+n_2+\dots +n_r=n$, kita mendefinisikan $\binom{n}{n_1,n_2,\dots ,n_r}$ sebagai
+
+$$
+\binom{n}{n_1,n_2,\dots ,n_r} = \frac{n!}{n_1! n_2! \dots n_r!}
+$$
+
+maka $\binom{n}{n_1,n_2,\dots ,n_r}$ merepresentasikan banyaknya pembagian yang mungkin dari $n$ objek berbeda ke dalam $r$ kelompok yang berbeda dengan masing-masing ukuran grup $n_1,n_2,\dots ,n_r$
+
+
+## Contoh 1g
+
+Dalam sebuah kelas terdapat 10 mahasiswa yang akan dibagi untuk kegiatan *Microteaching* menjadi tiga peran berbeda:
+
+- 5 orang sebagai guru model
+- 3 orang sebagai *observer*
+- 2 orang sebagai penilai 
+
+Berapa banyak cara berbeda untuk membagi 10 mahasiswa tersebut ke dalam tiga peran tersebut?
+
+*Solusi*:
+
+## Contoh 1h
+
+Sepuluh mahasiswa akan dibagi menjadi:
+
+- 5 orang sebagai praktikan gelombang 1
+- 5 orang sebagai praktikan gelombang 2
+
+Berapa banyak pembagian yang mungkin?
+
+*Solusi*:
+
+::: aside
+note: gelombang 1 dan gelombang 2 tidak memiliki label khusus; hanya pembagian anggotanya yang berbeda
+:::
