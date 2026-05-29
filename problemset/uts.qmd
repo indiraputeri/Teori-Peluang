@@ -1,0 +1,83 @@
+---
+title: "Ujian Tengah Semester"
+subtitle: "Teori Peluang – MTK0405"
+format: pdf
+---
+
+## Petunjuk
+- Jawablah semua soal dengan jelas dan sistematis.
+- Sertakan langkah perhitungan.
+- Waktu: 90 menit
+
+
+## Soal 1 (20 poin)
+
+Sebuah kata sandi terdiri dari 6 karakter yang dibentuk dari huruf kapital (A–Z) dan angka (0–9). Dengan ketentuan minimal terdapat **2 huruf** dan **2 angka**, serta tidak ada karakter yang berulang
+
+a. Berapa banyak kata sandi yang dapat dibentuk?
+b. Jika urutan karakter tidak diperhatikan (hanya kombinasi), berapa banyak kemungkinan yang ada?
+
+
+## Soal 2 (20 poin)
+
+Dua dadu dilempar secara bersamaan.
+
+a. Tentukan ruang sampel dari percobaan tersebut.
+b. Misalkan
+
+   - $A = “\texttt{jumlah kedua dadu adalah 8}”$ dan
+   - $B = “\texttt{minimal salah satu dadu menunjukkan angka 5}”$.  
+
+Hitung:
+
+   - $P(A)$
+   - $P(B)$
+   - $P(A \cap B)$  
+   
+c. Verifikasi:
+$$
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+$$
+
+
+## Soal 3 (20 poin)
+
+Di sebuah kota:
+
+- 5% penduduk mengidap penyakit
+- Sensitivitas tes = 90%
+- Spesifisitas tes = 95%
+
+a. Hitung peluang seseorang terdeteksi positif  
+b. Jika hasil tes positif, hitung peluang orang tersebut benar-benar sakit (Teorema Bayes)
+
+
+## Soal 4 (20 poin)
+
+Diberikan fungsi peluang:
+
+| $x$ | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| $P(X=x)$ | 0.1 | 0.3 | 0.4 | 0.2 |
+
+a. Verifikasi fungsi peluang  
+b. Hitung $E(X)$  
+c. Hitung $Var(X)$  
+
+
+## Soal 5 (20 poin)
+
+Dalam kotak terdapat:
+
+- 4 bola merah
+- 3 bola biru
+- 3 bola hijau
+
+Diambil 3 bola tanpa pengembalian.
+
+a. Peluang tepat 2 bola merah 
+b. Jika diketahui minimal 1 merah, peluang tepat 2 merah 
+c. Misal $X$ = banyak bola merah:
+   - Tentukan nilai kemungkinan $X$
+   - Tentukan distribusi peluangnya
+

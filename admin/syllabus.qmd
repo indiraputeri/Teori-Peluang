@@ -24,7 +24,6 @@ execute:
 {\large MTK0405} \\[0.5cm]
 
 {\Large Indira P. Kinasih} \\[0.2cm]
-{\itshape Assistant Professor in Statistics} \\[0.2cm]
 
 {\small \texttt{indiraputeri@uinmataram.ac.id}} \\[0.5cm]
 

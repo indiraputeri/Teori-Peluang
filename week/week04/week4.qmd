@@ -1,0 +1,405 @@
+---
+title: "Teori Peluang"
+subtitle: "Pekan 5 – Variabel Acak & Distribusi Diskret"
+author:
+  - name: Indira Puteri Kinasih
+    orcid: 0009-0009-6959-6723
+    email: indiraputeri@uinmataram.ac.id
+    affiliations: Universitas Islam Negeri Mataram
+format:
+  ubd-revealjs:
+    output-file: index.html
+    self-contained: true
+    chalkboard: false
+    toc: false
+    toc-depth: 1
+    transition: fade
+    auto-stretch: false
+    width: 1250  # 1050
+    height: 760  # 700
+execute:
+  echo: false
+---
+
+## Tujuan Pembelajaran Pekan 5
+
+Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:
+
+- Memahami konsep peubah acak sebagai fungsi dari ruang sampel
+- Membedakan peubah acak diskret dan nilai-nilai yang mungkin diambil
+- Menentukan distribusi peluang dari peubah acak diskret
+- Menghitung peluang kejadian berdasarkan distribusi peubah acak
+- Memahami dan menginterpretasikan fungsi distribusi kumulatif (CDF)
+- Membaca dan menafsirkan grafik CDF
+
+
+## Variabel Acak
+
+- Dalam banyak eksperimen, kita tidak selalu tertarik pada hasil detail, tetapi pada ringkasan tertentu dari hasil tersebut
+
+- Contoh:
+   - Lempar dua dadu → lebih tertarik pada jumlah kedua dadu, bukan pasangan angkanya
+   - Lempar koin → lebih tertarik pada jumlah munculnya kepala, bukan urutan hasilnya
+
+- Besaran yang menjadi fokus tersebut disebut: Peubah acak (*random variable*)
+
+::: callout-note
+## Definisi formal
+Peubah acak adalah **fungsi bernilai real** yang didefinisikan pada ruang sampel
+:::
+
+- Karena nilainya bergantung pada hasil eksperimen: Kita dapat menetapkan peluang untuk setiap nilai peubah acak
+
+## Contoh 5a
+
+- Misalkan terdapat eksperimen berupa melantunkan 3 koin. Jika $Y$ adalah banyaknya $angka$ yang muncul, maka $Y$ adalah variabel acak yang bernilai $0,1,2,3$ dengan nilai peluang masing-masing:
+
+::: columns
+::: {.column width="50%"}
+
+::: callout-tip
+## solusi
+$$
+\begin{aligned}
+P(Y = 0) &= P(G,G,G) = \frac{1}{8} \\
+P(Y = 1) &= P\{(G,G,A),(G,A,G),(A,G,G)\} = \frac{3}{8} \\
+P(Y = 2) &= P\{(G,A,A),(A,G,A),(A,A,G)\} = \frac{3}{8} \\
+P(Y = 3) &= P(G,G,G) = \frac{1}{8}
+\end{aligned}
+$$
+:::
+:::
+
+::: {.column width="50%"}
+::: callout-important
+## secara umum
+
+$$
+1 = P\left( \bigcup_{i=0}^{3} \{Y = i\} \right) = \sum_{i=0}^{3} P(Y = i)
+$$
+
+:::
+:::
+:::
+
+## Contoh 5b {.scrollable}
+
+- Tiga bola diambil secara acak **tanpa pengembalian** dari sebuah urn yang berisi 20 bola bernomor 1 sampai 20.  
+
+- Jika kita bertaruh bahwa **minimal satu bola bernomor $\geq$ 17**, berapakah peluang kita menang?
+
+**Jawab**
+
+- Misalkan: $X =$ **nilai terbesar dari 3 bola yang terambil**
+- maka:
+
+$$
+X \in \{3,4,\dots,20\}
+$$
+
+- jumlah cara memilih 3 bola dari 20:
+$$
+\binom{20}{3}
+$$
+
+- semua kemungkinan dianggap **sama peluangnya**.
+
+
+##  contd' {.scrollable}
+
+Untuk $i = 3,4,\dots,20$:
+
+$$
+P(X = i) = \frac{\binom{i-1}{2}}{\binom{20}{3}}
+$$
+
+**Penjelasan:**
+
+- Bola terbesar adalah $i$
+- Dua bola lainnya dipilih dari $\{1,2,\dots,i-1\}$
+
+**Contoh Perhitungan:**
+
+$$
+P(X = 20) = \frac{\binom{19}{2}}{\binom{20}{3}} = \frac{3}{20} = 0.150
+$$
+
+$$
+P(X = 19) = \frac{\binom{18}{2}}{\binom{20}{3}} = \frac{51}{380} \approx 0.134
+$$
+
+$$
+P(X = 18) = \frac{\binom{17}{2}}{\binom{20}{3}} \approx 0.119
+$$
+
+$$
+P(X = 17) = \frac{\binom{16}{2}}{\binom{20}{3}} \approx 0.105
+$$
+
+**Peluang Menang**
+
+- Menang jika:
+
+$$
+X \geq 17
+$$
+
+Maka:
+
+$$
+\begin{aligned}
+P(X \geq 17) &= P(17) + P(18) + P(19) + P(20)\\
+&= 0.105 + 0.119 + 0.134 + 0.150 = 0.508
+\end{aligned}
+$$
+**Kesimpulan**
+
+$$
+P(\text{menang}) \approx 0.508
+$$
+Peluang menang sekitar **50.8%**
+
+
+## Contoh 5c
+
+::: columns
+:::{.column width="40%"}
+
+Dilakukan pelemparan koin dengan peluang muncul $\texttt{gambar}$ sebesar $p$, secara independen, hingga:
+
+- muncul $\texttt{gambar}$, atau
+- mencapai maksimum $n$ kali percobaan
+
+::: callout-note
+
+## Solusi
+Misalkan:
+
+- $X =$ banyaknya pelemparan yang dilakukan
+:::
+
+:::
+
+::: {.column width="60%"}
+
+::: callout-tip
+
+## lanjutan solusi
+- $X=1$: langsung muncul $\texttt{gambar}$;  $P(X=1)=p$
+
+- $X=2$: gagal dulu, lalu $\texttt{gambar}$; $P(X=2)=(1-p)p$
+  
+- $X=3$: dua kali gagal, lalu $\texttt{gambar}$; $P(X=3)=(1-p)^2 p$
+  
+- $\dots$
+
+- $X=n$: tidak ada $\texttt{gambar}$ sampai percobaan ke-$n$; $P(X=n)=(1-p)^{n-1}$
+  
+  secara umum, untuk $i = 1,2,\dots,n-1$:
+
+$$
+P(X=i) = (1-p)^{i-1} \, p
+$$
+
+  sedangkan, untuk $i = n$:
+
+$$
+P(X=n) = (1-p)^{n-1}
+$$
+
+:::
+:::
+:::
+
+## Contd': validasi nilai{.scrollable}
+
+- Kita ingin menunjukkan bahwa:
+
+$$
+\sum_{i=1}^{n} P(X=i) = 1
+$$
+
+$$
+\sum_{i=1}^{n} P(X=i)
+= \sum_{i=1}^{n-1} p(1-p)^{i-1} + (1-p)^{n-1}
+$$
+
+- Gunakan Deret Geometri
+
+$$
+\begin{aligned}
+\sum_{i=1}^{n-1} p(1-p)^{i-1}
+&= p \sum_{i=0}^{n-2} (1-p)^i \\
+&= p \cdot \frac{1 - (1-p)^{n-1}}{1-(1-p)}
+\end{aligned}
+$$
+
+- Sederhanakan
+
+Karena $1-(1-p)=p$, maka:
+
+$$
+\begin{aligned}
+&= p \cdot \frac{1 - (1-p)^{n-1}}{p}\\
+&= 1 - (1-p)^{n-1}
+\end{aligned}
+$$
+
+- Hasil Akhir
+
+$$
+\begin{aligned}
+\sum_{i=1}^{n} P(X=i)
+&= \left[1 - (1-p)^{n-1}\right] + (1-p)^{n-1}\\
+&= 1
+\end{aligned}
+$$
+
+- Kesimpulan: distribusi peluang dikatakan valid karena:
+$$
+\sum_{i=1}^{n} P(X=i) = 1
+$$
+
+## Fungsi Distribusi Kumulatif (CDF)
+
+::: columns
+::: {.column width="50%"}
+
+::: callout-tip
+- Untuk suatu peubah acak $X$, fungsi $F$ yang didefinisikan sebagai:
+
+$$
+F(x) = P(X \leq x), \quad -\infty < x < \infty
+$$
+
+- disebut fungsi distribusi kumulatif (*cumulative distribution function* / CDF).
+:::
+
+::: callout-tip
+## Makna
+
+  - $F(x)$ menyatakan peluang bahwa $X$ bernilai kurang dari atau sama dengan $x$
+  - Berlaku untuk semua nilai real $x$
+:::
+
+:::
+
+::: {.column width="50%"}
+
+::: callout-tip
+## Sifat penting:
+
+   - Jika $a < b$, maka kejadian $\{X \leq a\} \subseteq \{X \leq b\}$, sehingga:
+
+$$
+F(a) \leq F(b)
+$$
+
+   - Artinya, $F(x)$ merupakan fungsi tidak menurun (non-decreasing).
+:::
+
+Catatan:
+
+- CDF digunakan untuk menggambarkan distribusi peluang secara lengkap
+- Sifat-sifat lain akan dibahas pada bagian berikutnya
+
+:::
+:::
+
+
+## Contoh Plot CDF (Diskret)
+
+
+```{r, fig.align='center'}
+library(ggplot2)
+
+# Data
+x <- c(0,1,2,3)
+p <- c(1/8, 3/8, 3/8, 1/8)
+cdf <- cumsum(p)
+
+df <- data.frame(x, cdf)
+
+# Untuk titik kiri (sebelum loncatan)
+x_left <- x[-1]
+cdf_left <- cdf[-length(cdf)]
+
+df_left <- data.frame(x_left, cdf_left)
+
+ggplot() +
+  # step function
+  geom_step(data = df, aes(x = x, y = cdf), direction = "hv") +
+  
+  # titik penuh (nilai F(x))
+  geom_point(data = df, aes(x = x, y = cdf), size = 3) +
+  
+  # titik kosong (limit kiri)
+  geom_point(data = df_left, 
+             aes(x = x_left, y = cdf_left),
+             shape = 1, size = 3) +
+  
+  labs(x = "x", y = "F(x)",
+       title = "Grafik CDF Diskret") +
+  ylim(0,1)
+```
+
+
+## Interpretasi Plot CDF
+
+::: columns
+::: {.column width="50%"}
+::: callout-tip
+
+- Sumbu $x$ menunjukkan nilai peubah acak
+- Sumbu $y$ menunjukkan $F(x) = P(X \leq x)$
+- $F(x)$ = peluang bahwa $X$ tidak melebihi $x$; contoh:
+   - $F(1) = 0.5$ → peluang $X \leq 1$
+   - $F(2) = 0.875$ → peluang $X \leq 2$
+:::
+
+::: callout-tip
+
+## Bentuk Tangga
+
+- Grafik berbentuk tangga karena $X$ diskret
+- Nilai hanya berubah pada titik tertentu
+- Di antaranya tetap (konstan)
+:::
+:::
+
+::: {.column width="50%"}
+::: callout-tip
+## Makna Loncatan
+
+- Besar loncatan di $x$ adalah:
+$$
+P(X = x)
+$$
+:::
+
+::: callout-tip
+## Kesimpulan
+
+- CDF tidak menurun
+- Nilai berkisar dari 0 hingga 1
+- Merepresentasikan distribusi peluang secara lengkap
+:::
+:::
+:::
+
+
+## Peubah Acak Diskret
+
+- Peubah acak yang hanya dapat mengambil **sejumlah nilai yang dapat dihitung (countable)** disebut: **peubah acak diskret**
+
+- Untuk peubah acak diskret $X$, didefinisikan fungsi massa peluang (pmf) sebagai:
+
+$$
+p(a) = P(X = a)
+$$
+
+
+- Sifat PMF
+
+  - $0 \leq p(a) \leq 1$
+  - $\sum p(a) = 1$

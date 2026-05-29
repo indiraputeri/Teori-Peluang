@@ -1,0 +1,80 @@
+---
+title: "Mock Test (Latihan UTS)"
+subtitle: "Teori Peluang – MTKO4O5"
+format: pdf
+---
+
+
+## Soal 1 (20 poin)
+
+Sebuah kode terdiri dari 5 karakter yang dibentuk dari:
+
+- huruf kecil (a–z) dan
+- angka (0–9)
+
+Dengan ketentuan:
+
+- minimal terdapat **1 huruf dan 2 angka**
+- karakter boleh berulang
+
+a. Berapa banyak kode yang dapat dibentuk?
+b. Jika karakter tidak boleh berulang, berapa banyak kemungkinan kode?
+
+
+## Soal 2 (20 poin)
+
+Sebuah koin dan sebuah dadu dilempar bersamaan.
+
+a. Tentukan ruang sampel dari percobaan tersebut  
+b. Misalkan:
+
+- A = “muncul angka pada koin”
+- B = “dadu menunjukkan bilangan genap”
+
+Hitung:
+
+- $P(A)$
+- $P(B)$
+- $P(A \cap B)$
+- $P(A \cup B)$
+
+
+## Soal 3 (20 poin)
+
+Dalam sebuah kelas:
+
+- 60% mahasiswa lulus matematika
+- 70% mahasiswa lulus statistika
+- 50% lulus keduanya
+
+a. Peluang lulus minimal satu mata kuliah;
+b. Peluang lulus matematika jika diketahui lulus statistika;
+c. Apakah kedua kejadian independen? Jelaskan
+
+
+## Soal 4 (20 poin)
+
+Diberikan variabel acak diskret:
+
+| $x$ | 0 | 1 | 2 | 3 |
+|---|---|---|---|---|
+| $P(X=x)$ | 0.2 | 0.3 | 0.3 | 0.2 |
+
+a. Hitung $E(X)$  
+b. Hitung $Var(X)$  
+c. Hitung $P(X \ge 2)$  
+
+
+## Soal 5 (20 poin)
+
+Dalam kotak terdapat:
+
+- 5 bola putih
+- 4 bola hitam
+
+Diambil 2 bola tanpa pengembalian.
+
+a. Peluang kedua bola berwarna sama;
+b. Peluang minimal satu bola hitam;
+c. Jika bola pertama hitam, peluang bola kedua juga hitam  
+

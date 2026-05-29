@@ -1,0 +1,1115 @@
+---
+title: "Peubah Acak Kontinu"
+subtitle: "Distribusi Uniform, Normal, dan Eksponensial"
+author:
+  - name: Indira Puteri Kinasih
+    orcid: 0009-0009-6959-6723
+    email: indiraputeri@uinmataram.ac.id
+    affiliations: Universitas Islam Negeri Mataram
+format:
+  ubd-revealjs:
+    output-file: index.html
+    self-contained: true
+    chalkboard: false
+    toc: false
+    toc-depth: 1
+    transition: fade
+    auto-stretch: false
+    width: 1250  # 1050
+    height: 760  # 700
+execute:
+  echo: false
+---
+
+# Pengantar
+
+## Peubah Acak Kontinu
+
+Peubah acak kontinu adalah peubah acak yang dapat mengambil nilai pada suatu interval kontinu.
+
+- Contoh:
+
+  - Tinggi badan
+  - Berat badan
+  - Suhu
+  - Waktu tunggu
+
+- Distribusi kontinu yang sering digunakan:
+
+  - Distribusi Uniform
+  - Distribusi Normal
+  - Distribusi Eksponensial
+
+---
+
+# Distribusi Uniform
+
+## Definisi
+
+Distribusi Uniform Kontinu menyatakan bahwa semua nilai pada interval memiliki peluang yang sama.
+
+Ditulis:
+
+$$
+X \sim U(\alpha,\beta)
+$$
+
+dengan:
+
+- $\alpha$ = batas bawah
+- $\beta$ = batas atas
+
+---
+
+## Fungsi Densitas Uniform
+
+$$
+f(x)=
+\begin{cases}
+\dfrac{1}{\beta-\alpha}, & \alpha \le x \le \beta \\
+0, & \text{lainnya}
+\end{cases}
+$$
+
+### Karakteristik
+
+- Grafik berbentuk persegi panjang
+- Tinggi grafik konstan
+- Semua nilai memiliki peluang yang sama
+- Total luas di bawah kurva = 1
+
+---
+
+## Grafik Distribusi Uniform
+
+```{r}
+library(ggplot2)
+
+x <- seq(0,10,length.out=1000)
+y <- dunif(x, min=2, max=8)
+
+df <- data.frame(x,y)
+
+ggplot(df, aes(x,y)) +
+  geom_line(linewidth=1.2) +
+  geom_area(alpha=0.3) +
+  labs(
+    title = "Distribusi Uniform",
+    x = "x",
+    y = "f(x)"
+  ) +
+  theme_minimal()
+```
+
+---
+
+## Mean dan Variansi Uniform
+
+### Mean
+
+$$
+E[X]=\frac{\alpha+\beta}{2}
+$$
+
+### Variansi
+
+$$
+Var(X)=\frac{(\beta-\alpha)^2}{12}
+$$
+
+---
+
+## Penurunan Mean Uniform
+
+$$
+E[X]
+=
+\int_\alpha^\beta x f(x)\,dx
+$$
+
+Karena
+
+$$
+f(x)=\frac{1}{\beta-\alpha}
+$$
+
+maka
+
+$$
+E[X]
+=
+\int_\alpha^\beta
+x\left(\frac{1}{\beta-\alpha}\right)\,dx
+$$
+
+## lanjutan: Penurunan Mean Uniform
+
+$$
+=
+\frac{1}{\beta-\alpha}
+\int_\alpha^\beta x\,dx
+$$
+
+$$
+=
+\frac{1}{\beta-\alpha}
+\left[
+\frac{x^2}{2}
+\right]_\alpha^\beta
+$$
+
+$$
+=
+\frac{1}{\beta-\alpha}
+\left(
+\frac{\beta^2-\alpha^2}{2}
+\right)
+$$
+
+Karena
+
+$$
+\beta^2-\alpha^2=(\beta-\alpha)(\beta+\alpha)
+$$
+
+maka
+
+$$
+E[X]
+=
+\frac{\alpha+\beta}{2}
+$$
+
+---
+
+## Penurunan Variansi Uniform
+
+Gunakan:
+
+$$
+Var(X)=E[X^2]-(E[X])^2
+$$
+
+Pertama hitung:
+
+$$
+E[X^2]
+=
+\int_\alpha^\beta x^2 f(x)\,dx
+$$
+
+$$
+=
+\int_\alpha^\beta
+\frac{x^2}{\beta-\alpha}\,dx
+$$
+
+$$
+=
+\frac{1}{\beta-\alpha}
+\int_\alpha^\beta x^2\,dx
+$$
+
+## lanjutan: Penurunan variansi Uniform
+
+
+$$
+=
+\frac{1}{\beta-\alpha}
+\left[
+\frac{x^3}{3}
+\right]_\alpha^\beta
+$$
+
+$$
+=
+\frac{\beta^3-\alpha^3}
+{3(\beta-\alpha)}
+$$
+
+Gunakan identitas:
+
+$$
+\beta^3-\alpha^3
+=
+(\beta-\alpha)
+(\beta^2+\alpha\beta+\alpha^2)
+$$
+
+maka
+
+$$
+E[X^2]
+=
+\frac{\beta^2+\alpha\beta+\alpha^2}{3}
+$$
+
+
+## lanjutan: penurunan variansi Uniform
+
+Sehingga:
+
+$$
+Var(X)
+=
+\frac{\beta^2+\alpha\beta+\alpha^2}{3}
+-
+\left(
+\frac{\alpha+\beta}{2}
+\right)^2
+$$
+
+Hasil akhirnya:
+
+$$
+Var(X)=\frac{(\beta-\alpha)^2}{12}
+$$
+
+---
+
+## Contoh Soal Uniform (1)
+
+Misal:
+
+$$
+X \sim U(2,8)
+$$
+
+Tentukan:
+
+1. $E[X]$
+2. $Var(X)$
+
+### Jawaban
+
+$$
+E[X]
+=
+\frac{2+8}{2}=5
+$$
+
+$$
+Var(X)
+=
+\frac{(8-2)^2}{12}
+=
+\frac{36}{12}
+=3
+$$
+
+---
+
+
+## Contoh soal uniform (2)
+
+Sebuah bus melayani rute antara kota A dan B yang berjarak 100 km. Jika terjadi kerusakan (breakdown), posisi kejadian diukur dari kota A dan diasumsikan:
+
+$$
+X \sim \text{Uniform}(0,100)
+$$
+
+- dengan fungsi densitas:
+
+$$
+f(x)=\frac{1}{100}, \quad 0<x<100
+$$
+
+- Terdapat satu stasiun servis yang akan ditempatkan di sepanjang rute tersebut.
+
+- Dua pilihan lokasi stasiun diusulkan:
+
+    - Lokasi 1: di titik 50 km
+    - Lokasi 2: di titik 25 km
+
+## Pertanyaan
+
+lokasi mana yang lebih efisien jika efisiensi diukur dari **rata-rata jarak breakdown ke stasiun**, yaitu:
+
+$$
+E[D(X)] = E(|X-c|)
+$$
+
+dengan $c$ adalah lokasi stasiun.
+
+
+## Penyelesaian
+
+- Sifat penting
+
+Untuk $X \sim \text{Uniform}(0,100)$, diketahui:
+
+$$
+E(|X-c|) = \int_0^{100} |x-c|\frac{1}{100}dx
+$$
+
+
+### 1. Lokasi 1: $c=50$
+
+Karena simetri:
+
+$$
+E(|X-50|) = \frac{100}{4} = 25
+$$
+
+
+## lanjutan: soal uniform
+
+### 2. Lokasi 2: $c=25$
+
+Hitung:
+
+$$
+E(|X-25|)=\int_0^{100} |x-25|\frac{1}{100}dx
+$$
+
+Hasil (atau bisa dihitung terpisah):
+
+$$
+E(|X-25|)=31.25
+$$
+
+---
+
+## Kesimpulan
+
+$$
+E(|X-50|)=25 < 31.25 = E(|X-25|)
+$$
+
+Jadi, lokasi $50$ mil lebih efisien karena memberikan jarak rata-rata breakdown ke stasiun yang lebih kecil.
+
+
+# Distribusi Normal
+
+## Definisi
+
+Distribusi Normal adalah distribusi peluang kontinu yang berbentuk simetris menyerupai lonceng (*bell-shaped curve*), di mana sebagian besar data terkonsentrasi di sekitar nilai rata-rata, dan frekuensinya menurun secara bertahap semakin jauh dari rata-rata tersebut. Distribusi ini merupakan salah satu distribusi yang paling penting dan paling sering digunakan dalam statistika karena banyak fenomena alam, sosial, dan pengukuran nyata mendekati pola distribusi normal.
+
+Ditulis:
+
+$$
+X \sim N(\mu,\sigma^2)
+$$
+
+dengan:
+
+- $\mu$ = mean
+- $\sigma^2$ = variansi
+
+---
+
+## Grafik Distribusi Normal
+
+```{r}
+library(ggplot2)
+
+x <- seq(-4,4,length.out=1000)
+y <- dnorm(x, mean=0, sd=1)
+
+df <- data.frame(x,y)
+
+ggplot(df, aes(x,y)) +
+  geom_line(linewidth=1.2) +
+  geom_area(alpha=0.3) +
+  labs(
+    title = "Distribusi Normal Standar",
+    x = "x",
+    y = "f(x)"
+  ) +
+  theme_minimal()
+```
+
+
+## Fungsi Densitas Normal
+
+$$
+f(x)=
+\frac{1}{\sigma\sqrt{2\pi}}
+e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$
+
+### Karakteristik
+
+- Bentuk lonceng (bell shape)
+- Simetris terhadap mean
+- Mean = Median = Modus
+- **Luas di bawah kurva = 1**
+
+---
+
+## Penurunan Ekspektasi Normal
+
+Substitusikan fungsi densitas normal:
+
+$$
+E(X)=
+\int_{-\infty}^{\infty}
+x
+\frac{1}{\sigma\sqrt{2\pi}}
+\exp\left(
+-\frac{(x-\mu)^2}{2\sigma^2}
+\right)
+dx
+$$
+
+Gunakan substitusi:
+
+$$
+z=\frac{x-\mu}{\sigma}
+$$
+
+sehingga:
+
+$$
+x=\mu+\sigma z
+$$
+
+dan
+
+$$
+dx=\sigma dz
+$$
+
+
+## lanjutan: ekspektasi Normal
+
+Maka:
+
+$$
+E(X)=
+\int_{-\infty}^{\infty}
+(\mu+\sigma z)
+\frac{1}{\sqrt{2\pi}}
+e^{-z^2/2}
+dz
+$$
+
+Pisahkan integral:
+
+$$
+E(X)=
+\mu
+\int_{-\infty}^{\infty}
+\frac{1}{\sqrt{2\pi}}
+e^{-z^2/2}
+dz
++
+\sigma
+\int_{-\infty}^{\infty}
+z
+\frac{1}{\sqrt{2\pi}}
+e^{-z^2/2}
+dz
+$$
+
+
+## lanjutan: ekspektasi Normal
+
+Karena:
+
+$$
+\int_{-\infty}^{\infty}
+\frac{1}{\sqrt{2\pi}}
+e^{-z^2/2}
+dz
+=1
+$$
+
+dan fungsi
+
+$$
+z e^{-z^2/2}
+$$
+
+merupakan fungsi ganjil pada interval simetris, maka:
+
+$$
+\int_{-\infty}^{\infty}
+z
+\frac{1}{\sqrt{2\pi}}
+e^{-z^2/2}
+dz
+=0
+$$
+
+Sehingga diperoleh:
+
+$$
+E(X)=\mu
+$$
+
+---
+
+## Distribusi Normal Standar
+
+Jika:
+
+$$
+\mu=0
+$$
+
+dan
+
+$$
+\sigma=1
+$$
+
+maka disebut distribusi normal standar.
+
+Ditulis:
+
+$$
+Z \sim N(0,1)
+$$
+
+Transformasi ke skor-z:
+
+$$
+Z=\frac{X-\mu}{\sigma}
+$$
+
+---
+
+## Aturan Empiris
+
+Pada distribusi normal:
+
+- Sekitar 68% data berada pada:
+
+$$
+\mu \pm 1\sigma
+$$
+
+- Sekitar 95% data berada pada:
+
+$$
+\mu \pm 2\sigma
+$$
+
+- Sekitar 99.7% data berada pada:
+
+$$
+\mu \pm 3\sigma
+$$
+
+---
+
+## Contoh Soal Normal(1)
+
+Tinggi badan mahasiswa berdistribusi normal:
+
+$$
+X \sim N(170,5^2)
+$$
+
+Tentukan skor-z untuk mahasiswa dengan tinggi 180 cm.
+
+### Jawaban
+
+$$
+Z=\frac{180-170}{5}=2
+$$
+
+Artinya mahasiswa tersebut berada 2 standar deviasi di atas rata-rata.
+
+---
+
+## Contoh soal Normal (2)
+
+**Aproksimasi Binomial dengan Distribusi Normal**
+
+Jika 65% dari populasi suatu komunitas besar mendukung kenaikan pajak sekolah yang diusulkan, maka peluang bahwa dalam sampel acak 100 orang:
+
+(a) paling sedikit 50 orang mendukung usulan tersebut  
+(b) antara 60 sampai 70 orang (inklusif) mendukung  
+(c) kurang dari 75 orang mendukung  
+
+Tentukan peluang-peluang tersebut dengan pendekatan distribusi normal.
+
+---
+
+## Penyelesaian
+
+Misalkan banyaknya orang yang mendukung dalam sampel adalah:
+
+$$
+X \sim \text{Binomial}(n=100, p=0.65)
+$$
+
+Karena $n$ besar, gunakan pendekatan normal:
+
+$$
+X \approx N(\mu, \sigma^2)
+$$
+
+dengan:
+
+$$
+\mu = np = 100(0.65) = 65
+$$
+
+$$
+\sigma^2 = np(1-p) = 100(0.65)(0.35) = 22.75
+$$
+
+$$
+\sigma = \sqrt{22.75} \approx 4.77
+$$
+
+Gunakan **koreksi kontinuitas (continuity correction)**.
+
+---
+
+## (a) $P(X \ge 50)$
+
+Dengan koreksi kontinuitas:
+
+$$
+P(X \ge 50) \approx P(X \ge 49.5)
+$$
+
+Standarisasi:
+
+$$
+Z = \frac{49.5 - 65}{4.77} \approx -3.25
+$$
+
+Sehingga:
+
+$$
+P(X \ge 49.5) = P(Z \ge -3.25)
+$$
+
+$$
+= 1 - P(Z < -3.25) \approx 0.9994
+$$
+
+---
+
+## (b) $P(60 \le X \le 70)$
+
+Dengan koreksi kontinuitas:
+
+$$
+P(60 \le X \le 70) \approx P(59.5 \le X \le 70.5)
+$$
+
+Standarisasi:
+
+$$
+Z_1 = \frac{59.5 - 65}{4.77} \approx -1.15
+$$
+
+$$
+Z_2 = \frac{70.5 - 65}{4.77} \approx 1.15
+$$
+
+Sehingga:
+
+$$
+P(-1.15 \le Z \le 1.15)
+$$
+
+$$
+= 0.8749 - 0.1251 = 0.7498
+$$
+
+---
+
+## (c) $P(X < 75)$
+
+Dengan koreksi kontinuitas:
+
+$$
+P(X < 75) \approx P(X < 74.5)
+$$
+
+Standarisasi:
+
+$$
+Z = \frac{74.5 - 65}{4.77} \approx 1.99
+$$
+
+Sehingga:
+
+$$
+P(Z < 1.99) \approx 0.9767
+$$
+
+---
+
+## Kesimpulan
+
+- (a) $P(X \ge 50) \approx 0.9994$
+- (b) $P(60 \le X \le 70) \approx 0.7498$
+- (c) $P(X < 75) \approx 0.9767$
+
+
+
+# Distribusi Eksponensial
+
+## Definisi
+
+Distribusi Eksponensial digunakan untuk memodelkan waktu tunggu.
+
+Contoh:
+
+- Waktu kedatangan pelanggan
+- Waktu kerusakan mesin
+- Waktu menunggu bus
+
+Ditulis:
+
+$$
+X \sim Exp(\lambda)
+$$
+
+dengan:
+
+- $\lambda$ = parameter laju
+
+---
+
+## Fungsi Densitas Eksponensial
+
+$$
+f(x)=
+\lambda e^{-\lambda x},
+\quad x>0
+$$
+
+### Karakteristik
+
+- Kurva menurun
+- Nilai kecil lebih sering muncul
+- Bersifat memoryless
+
+---
+
+## Grafik Distribusi Eksponensial
+
+```{r}
+library(ggplot2)
+
+x <- seq(0,10,length.out=1000)
+y <- dexp(x, rate=0.5)
+
+df <- data.frame(x,y)
+
+ggplot(df, aes(x,y)) +
+  geom_line(linewidth=1.2) +
+  geom_area(alpha=0.3) +
+  labs(
+    title = "Distribusi Eksponensial",
+    x = "x",
+    y = "f(x)"
+  ) +
+  theme_minimal()
+```
+
+---
+
+## Mean dan Variansi Eksponensial
+
+### Mean
+
+$$
+E[X]=\frac{1}{\lambda}
+$$
+
+### Variansi
+
+$$
+Var(X)=\frac{1}{\lambda^2}
+$$
+
+---
+
+## Ekspektasi eskponensial
+
+Definisi ekspektasi:
+
+$$
+E(X)=\int_{0}^{\infty} x f(x)\,dx
+$$
+
+Substitusikan fungsi densitas:
+
+$$
+E(X)=\int_{0}^{\infty} x \lambda e^{-\lambda x}\,dx
+$$
+
+---
+
+## Gunakan Integrasi Parsial
+
+Ambil:
+
+- $u = x \Rightarrow du = dx$
+- $dv = \lambda e^{-\lambda x} dx \Rightarrow v = -e^{-\lambda x}$
+
+(mengapa? karena $\int \lambda e^{-\lambda x} dx = -e^{-\lambda x}$)
+
+Maka:
+
+$$
+\int x \lambda e^{-\lambda x} dx
+=
+- x e^{-\lambda x} + \int e^{-\lambda x} dx
+$$
+
+Hitung integral sisa:
+
+$$
+\int e^{-\lambda x} dx = -\frac{1}{\lambda} e^{-\lambda x}
+$$
+
+---
+
+## Gabungkan hasil
+
+$$
+E(X)=\left[-x e^{-\lambda x}\right]_{0}^{\infty}
++
+\left[-\frac{1}{\lambda} e^{-\lambda x}\right]_{0}^{\infty}
+$$
+
+
+**Evaluasi batas**
+
+### 1. Limit pertama
+
+$$
+\lim_{x \to \infty} x e^{-\lambda x} = 0
+$$
+
+Penjelasan: bentuk ini dapat ditulis ulang sebagai
+
+$$
+x e^{-\lambda x} = \frac{x}{e^{\lambda x}}
+$$
+
+- Ketika $x \to \infty$, pembilang $x$ tumbuh secara linear, sedangkan penyebut $e^{\lambda x}$ tumbuh secara eksponensial. Karena pertumbuhan eksponensial jauh lebih cepat dibandingkan pertumbuhan linear, maka nilai pecahan tersebut menuju nol.
+
+## lanjutan: limit pertama
+
+- Secara formal (misalnya dengan aturan L'Hôpital):
+
+$$
+\lim_{x \to \infty} \frac{x}{e^{\lambda x}}
+=
+\lim_{x \to \infty} \frac{1}{\lambda e^{\lambda x}}
+=0
+$$
+
+
+Sehingga:
+
+$$
+\lim_{x \to \infty} x e^{-\lambda x} = 0
+$$
+
+dan saat $x=0$:
+
+$$
+x e^{-\lambda x} = 0 \cdot e^{0} = 0
+$$
+
+Dengan demikian, evaluasi batas menjadi:
+
+$$
+\left[-x e^{-\lambda x}\right]_{0}^{\infty}
+=
+\lim_{x \to \infty} (-x e^{-\lambda x}) - (-(0))
+=
+0 - 0
+=
+0
+$$
+
+## lanjutan: ekspektasi eksponensial
+
+### 2. Limit kedua
+
+$$
+\left[-\frac{1}{\lambda} e^{-\lambda x}\right]_{0}^{\infty}
+=
+0 - \left(-\frac{1}{\lambda}\right)
+=
+\frac{1}{\lambda}
+$$
+
+
+### Hasil akhir
+
+$$
+E(X)=\frac{1}{\lambda}
+$$
+
+---
+
+## Kesimpulan
+
+Untuk $X \sim \text{Exp}(\lambda)$:
+
+$$
+E(X)=\frac{1}{\lambda}
+$$
+
+- Artinya:
+
+  - semakin besar $\lambda$ → proses makin cepat terjadi
+  - sehingga rata-rata waktu menunggu semakin kecil
+
+- **Sifat Memoryless**
+
+
+   - Distribusi eksponensial memiliki sifat:
+
+$$
+P(X>s+t \mid X>s)=P(X>t)
+$$
+
+   - Artinya peluang menunggu tambahan waktu tidak dipengaruhi oleh waktu yang telah berlalu.
+
+---
+
+## Contoh Soal Eksponensial
+
+Misalkan waktu tunggu pelanggan mengikuti:
+
+$$
+X \sim Exp(0.5)
+$$
+
+Tentukan rata-rata waktu tunggu.
+
+### Jawaban
+
+$$
+E[X]
+=
+\frac{1}{0.5}
+=
+2
+$$
+
+Jadi rata-rata waktu tunggu adalah 2 satuan waktu.
+
+---
+
+# Perbandingan Distribusi
+
+| Distribusi | Bentuk | Parameter | Mean | Variansi |
+|---|---|---|---|---|
+| Uniform | Datar | $\alpha,\beta$ | $\frac{\alpha+\beta}{2}$ | $\frac{(\beta-\alpha)^2}{12}$ |
+| Normal | Lonceng | $\mu,\sigma^2$ | $\mu$ | $\sigma^2$ |
+| Eksponensial | Menurun | $\lambda$ | $\frac{1}{\lambda}$ | $\frac{1}{\lambda^2}$ |
+
+---
+
+# Kesimpulan
+
+## Ringkasan
+
+- Distribusi Uniform memiliki peluang yang sama pada interval tertentu
+- Distribusi Normal berbentuk simetris seperti lonceng
+- Distribusi Eksponensial digunakan untuk memodelkan waktu tunggu
+
+Ketiga distribusi ini sangat penting dalam statistika dan probabilitas.
+
+---
+
+# Lampiran
+
+## Mengapa Fungsi |x − 50| Harus Dipecah di x = 50?
+
+Perhatikan fungsi nilai mutlak:
+
+$$
+|u| =
+\begin{cases}
+u, & u \ge 0 \\
+-u, & u < 0
+\end{cases}
+$$
+
+Misalkan:
+$$
+u = x - 50
+$$
+
+---
+
+## 1. Menentukan titik perubahan
+
+Titik perubahan terjadi saat:
+
+$$
+x - 50 = 0 \Rightarrow x = 50
+$$
+
+Titik ini disebut **titik kritis**, karena di titik inilah tanda ekspresi berubah.
+
+---
+
+## 2. Analisis tanda di setiap interval
+
+### (a) Untuk $0 \le x \le 50$
+
+Ambil contoh $x=30$:
+
+$$
+x - 50 = -20 \quad (\text{negatif})
+$$
+
+Karena bernilai negatif, maka:
+
+$$
+|x - 50| = -(x - 50) = 50 - x
+$$
+
+---
+
+### (b) Untuk $50 < x \le 100$
+
+Ambil contoh $x=70$:
+
+$$
+x - 50 = 20 \quad (\text{positif})
+$$
+
+Karena bernilai positif, maka:
+
+$$
+|x - 50| = x - 50
+$$
+
+---
+
+## Bentuk fungsi potongan (*piecewise*)
+
+Dengan demikian:
+
+$$
+|x - 50| =
+\begin{cases}
+50 - x, & 0 \le x \le 50 \\
+x - 50, & 50 < x \le 100
+\end{cases}
+$$
+
+---
+
+## 4. Intuisi
+
+Fungsi $|x - 50|$ merepresentasikan **jarak antara titik $x$ dan 50**.
+
+- Jika $x$ berada di kiri 50 → jarak = $50 - x$
+- Jika $x$ berada di kanan 50 → jarak = $x - 50$
+
+---
+
+## Kesimpulan
+
+Fungsi nilai mutlak harus dipecah di $x=50$ karena di titik tersebut ekspresi $x-50$ berubah tanda, sehingga definisi nilai mutlak juga berubah.
